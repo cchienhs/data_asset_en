@@ -6,13 +6,15 @@ When storage policies are configured for the data of your devices, both the devi
 
 For each TSDB storage type, you can invoke a data service API to get the stored data. The function and usage of the data service APIs is described below.
 
-| API Name                      | Function                                                     | Usage Note                                                   |
-| ----------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| `getAssetsAIRawData`          | Get asset data stored as the **AI Raw Data** storage type in TSDB. | Query the stored data by combination of device model ID, asset IDs, measure point IDs, and time rage. |
-| `getAssetsAINormalizedData`   | Get asset data stored as the **AI Normalized Data** storage type in TSDB. | Query the stored data by combination of device model ID, asset IDs, measure point IDs with data aggregation logic, aggregation time interval, and time range. Note that if data aggregation logic is NOT used, the value of the `interval` parameter must be 0. |
-| `getAssetsStatusData`         | Get asset data stored as the **DI Data** storage type in TSDB. | Query the status change data of devices by combination of device model ID, asset IDs, measure point IDs, and time rage. |
-| `getAssetsGenericData`        | Get asset data stored as the **Generic Data** storage type in TSDB. | Query the stored generic data by combination of device model ID, asset IDs, measure point IDs, and time rage. |
-| `getAssetsRawDataByTimeRange` | Get asset data stored as the **AI Raw Data**, **DI Data**, and **Generic Data** storage types in TSDB. | Query the stored asset raw data by combination of device model ID, asset IDs, measure point IDs, and time rage. |
+| API Name                           | Function                                                     | Usage Note                                                   |
+| ---------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| `getAssetsAIRawData`               | Get asset data stored as the **AI Raw Data** storage type in TSDB. | Query the stored data by combination of device model ID, asset IDs, measure point IDs, and time rage. |
+| `getAssetsAINormalizedData`        | Get asset data stored as the **AI Normalized Data** storage type in TSDB. | Query the stored data by combination of device model ID, asset IDs, measure point IDs with data aggregation logic, aggregation time interval, and time range. Note that if data aggregation logic is NOT used, the value of the `interval` parameter must be 0. |
+| `getAssetsStatusData`              | Get asset data stored as the **DI Data** storage type in TSDB. | Query the status change data of devices by combination of device model ID, asset IDs, measure point IDs, and time rage. |
+| `getAssetsCurrentDayElectricPower` | Get asset current day electric power data.                   | Query the current day electric power data of devices by combination of device model ID, asset IDs, and measure point IDs (calculation starts from 00:00 of the current day). |
+| `getAssetsElectricPowerData`       | Get asset electric power data stored as the **PI Data** storage type in TSDB. | Query the stored electric power data by combination of device model ID, asset IDs, measure point IDs with data aggregation logic, aggregation time interval, and time range. Note that if data aggregation logic is NOT used, the value of the `interval` parameter must be 0. |
+| `getAssetsGenericData`             | Get asset data stored as the **Generic Data** storage type in TSDB. | Query the stored generic data by combination of device model ID, asset IDs, measure point IDs, and time rage. |
+| `getAssetsRawDataByTimeRange`      | Get asset data stored as the **AI Raw Data**, **DI Data**, and **Generic Data** storage types in TSDB. | Query the stored asset raw data by combination of device model ID, asset IDs, measure point IDs, and time rage. |
 
 ## EnOS API SDK for Java
 
@@ -26,7 +28,7 @@ EnOS provides an API SDK to help you calling the EnOS service APIs and developin
    <dependency>
        <groupId>com.envisioniot</groupId>
        <artifactId>enos-api</artifactId>
-       <version>2.3.3</version>
+       <version>2.3.5</version>
    </dependency>
    ```
 
@@ -101,7 +103,7 @@ public class demo {
 
 The reference documentation for each API can be found through **EnOS API** > **API Documents** in the EnOS Console. Summary of APIs is displayed in tables by API service categories. Click the **More** icon for each API to view details, including API function, calling method, requesting URL, parameter description, calling sample, and response sample.
 
-.. image:: ../media/api_doc.png
+.. image:: ../../media/api_doc.png
 
 For more information about how to use EnOS API, see [Getting Started with EnOS REST APIs](https://www.envisioniot.com/docs/app-development/en/latest/gettingstarted_api.html).
 

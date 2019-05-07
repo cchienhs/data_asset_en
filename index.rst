@@ -13,7 +13,7 @@
    :caption: Learn
 
    learn/data_flow
-   learn/storage_policy_overview
+   learn/storage_types
    learn/index
    learn/data_subscription_overview
 
@@ -31,24 +31,15 @@
    :maxdepth: 2
    :caption: How-to's
 
-   howto/creating_storage_group
-   configuring_tsdb_storage
-   howto/editing_storage_group
-   howto/developing_stream
-   howto/monitoring_stream
-   howto/getting_stored_data
-   howto/managing_data_subscription
+   howto/storage/index
+   howto/stream/index
+   howto/obtain/index
 
 .. toctree::
    :maxdepth: 1
    :caption: Reference
 
+   reference/time_window
+   reference/power_calculation_logic
    reference/statement_syntax
    reference/data_subscription_sdk
-
-Downloads
-""""""""
-    pdf_ htmlzip_ epub_
-.. _pdf: https://www.envisioniot.com/projects/online-data/downloads/pdf/latest/
-.. _htmlzip: https://www.envisioniot.com/projects/online-data/downloads/htmlzip/latest/
-.. _epub: https://www.envisioniot.com/projects/online-data/downloads/epub/latest/

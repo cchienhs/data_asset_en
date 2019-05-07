@@ -1,57 +1,31 @@
 # AI Data Aggregation Template
+
 AI (analogy input)  data consists of physical parameters like temperature, pressure, flow, etc. The values of these parameters are collected by various sensors, converted to electric signals by a transmitter, and transferred to the analogy input of the controller.
 
-EnOS Streaming Processing Engine provides a unified AI data aggregation template to process the AI type data ingested from a measure point and assign the processed data to another measure point defined for the same device, thus enabling developers to process real-time AI data easily and quickly.  
+EnOS streaming processing engine provides a unified AI data aggregation template to process the AI type data ingested from a measure point and assign the processed data to another measure point defined for the same device, thus enabling developers to process real-time AI data easily and quickly.  
 
 ## Features
-- Supporting event-time-based AI data aggregation.
 
-- Providing rich aggregation algorithm, including `max`, `min`, `avg`, `sum`, and `cnt`.
+**Rich aggregation algorithm**
 
-- Supporting time window latency. When window latency is set, an intermediate output will be generated (the computed output value of the current window when the next window starts) . The intermediate output will be saved in TSDB but will not be archived.
+Providing rich aggregation algorithms, including `max`, `min`, `avg`, `sum`, and `cnt`.
 
-- Supporting various threshold ranges. Input data that exceeds the threshold will be processed by the interpolation algorithm.
+**Data processing based on time window**
 
-## Processing Stream Configuration
-The configuration method of the AI data processing stream depends on the type of selected time window. Time window is a useful data processing mechanism of streaming computing. Windowing is simply the notion of taking a data source and chopping it up along temporal boundaries into finite chunks for processing (such as sum). EnOS Streaming Processing Engine supports tumbling window.
+Supporting event-time-based windowing mechanism for AI data aggregation. For detailed information about time window, see [Time Window](../reference/time_window).
 
-### Processing strategy
+**Time window latency setting**
 
-EnOS integrates asset templates to normalize all asset input data, so the stream processing engine can apply the same processing strategy for asset data of the same model. Each processing strategy defines the input point, output point, threshold, interpolation, window size, and aggregation.
+Supporting time window latency. When window latency is set, an intermediate output will be generated (the computed output value of the current window when the next window starts). The intermediate output will be saved in TSDB but will not be archived.
 
- + **Input point**: The model point that provides input data to be processed.
+**Invalid data filtering**
 
-   > AI data aggregation template can process measure point data of AI type only.
+Supporting various threshold ranges to filter invalid data. Input data that exceeds the threshold will be processed by the interpolation algorithm.
 
- + **Output point**: After the input data is processed, the processed result is transferred to the output point, and an output record is generated. The timestamp of the output record is the start time of the time window.
+## Configuring AI Data Aggregation Jobs
 
-   > 1. The output point must be a measure point of AI type.
-   > 2. Ensure that the input point and output point belong to the same model.
-   > 3. Avoid designing loop streams in the stream, like a -> b -> c -> a.
+Take the following steps to use the Window Aggregation for AI template to quickly create a stream processing job:
 
- + **Threshold**: Before processing, the input data is filtered by the specified threshold. Data exceeding the threshold will be processed by interpolation algorithm.
+1. When initializing the stream processing job, select the **Window Aggregation for AI** template. For detailed information, see [Creating a Stream Processing Job](../howto/stream/creating_job).
 
-   > If the data of the input point is not raw data and the interpolation strategy is "Ignore", the specified threshold will not take effect.
-
- + **Interpolation**: Interpolation algorithm that is used to revise the input data. Currently, interpolation strategy supports "Ignore" only. Data that exceeds the threshold will not be included in the processing.
-
- + **Window size**: Specifies the amount of data to be computed in a single window.
-
-   > In sequential aggregation streams like "a -> b -> c", the window size of stream "b -> c" should be the same as that of stream "a -> b" because stream "a -> b" will generate an intermediate output.
-
- + **Aggregation**: The function that is selected to compute data in the window. EnOS Streaming Processing Engine currently supports functions like `max`, `min`, `avg`, `sum`, and `cnt`.
-
-   -  `max`: Compare all valid record values in the time window and output the maximum value.
-   -  `min`: Compare all valid record values in the time window and output the minimum value.
-   -  `avg`: Calculate and output the average value of all valid record values in the time window.
-   -  `sum`: Calculate and output the sum value of all valid record values in the time window.
-   -  `cnt`: Count all valid record values in the time window and output the total number.
-
-### Processing strategy management
-
-You can perform the following general operations for processing strategies:
-
-- **Add**: Click **New Strategy** to add a new entry of processing strategy. The stream can be saved only when all configuration is completed.
-- **Copy**: Click the **Copy** icon to copy an existing strategy and configure a new one quickly.
-- **Edit**: Each processing strategy can be edited if needed.
-- **Delete**: Click the **Delete** icon to remove a processing strategy if needed.
+2. Configure AI data processing policy. For detailed information, see [Configuring AI Data Aggregation Job](../howto/stream/configuring_ai_template).

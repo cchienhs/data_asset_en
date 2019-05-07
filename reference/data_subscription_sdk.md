@@ -1,31 +1,7 @@
 # Data Subscription SDK Reference
-After completing the data subscription configuration, you can use the data subscription SDK to retrieve the subscribed data. The data subscription SDK reference is as follows:
+The data subscription SDK reference is as follows:
 
-## Dependency
-
-Before using the EnOS SDK for data subscription, add the following dependency to your Java project file:
-
-```
-<dependency>
-  <groupId>com.envisioniot</groupId>
-  <artifactId>enos-subscribe</artifactId>
-  <version>2.0.0</version>
-</dependency>
-<dependency>
-  <groupId>com.google.code.gson</groupId>
-  <artifactId>gson</artifactId>
-  <version>2.8.0</version>
-</dependency>
-<dependency>
-  <groupId>log4j</groupId>
-  <artifactId>log4j</artifactId>
-  <version>1.2.16</version>
-</dependency>
-```
-
-
-
-## Real-time Data Subscription
+## For Real-time Data Subscription
 
 ### Subscription Client Class: EosClient
 
@@ -83,50 +59,8 @@ Before using the EnOS SDK for data subscription, add the following dependency to
      - point：Subscribed measure point data
      - null
 
-### Code Sample
 
-```
-import com.envisioniot.sub.client.EosClient;
-import com.envisioniot.sub.client.data.IDataHandler;
-import com.envisioniot.sub.client.data.IDataService;
-import com.envisioniot.sub.common.exception.SubscribeException;
-import com.envisioniot.sub.common.model.dto.StreamMessage;
-
-public class sample {
-
-    public static void main(String[] args) throws SubscribeException {
-        String host = "subscription_server";
-        int port = 9001;
-        String accessKey = "access_key";
-        String secretKey = "secret_key";
-        String subId = "subscription_id";
-        String consumerGroup = "consumer_group"; 
-
-        /* Service */
-        EosClient eosClient = new EosClient(host, port, accessKey, secretKey);
-        IDataService dataService = eosClient.getDataService();
-
-        /* Handler */
-        IDataHandler dataHandler = new IDataHandler(){
-
-            public void dataRead(StreamMessage message) {
-                System.out.println(message);
-            }
-        };
-
-        /* Subscribe */
-        dataService.subscribe(dataHandler, subId);
-        
-        /* Subscribe with consumer group (optional) */
-        dataService.subscribe(dataHandler, subId, consumerGroup);
-
-    }
-}
-```
-
-.. note:: The `host` and `port` of the subscription server vary with the cloud region and instance. For private cloud instances, contact your Envision project manager or support representative to get the host and port information.
-
-## Alert Data Subscription
+## For Alert Data Subscription
 
 ### Subscription Client Class: EosClient
 
@@ -186,45 +120,6 @@ public class sample {
      - alert: Subscribed alert data
      - null
 
-### Code Sample
 
-```
-import com.envisioniot.sub.client.EosClient;
-import com.envisioniot.sub.client.data.IDataHandler;
-import com.envisioniot.sub.client.data.IDataService;
-import com.envisioniot.sub.common.exception.SubscribeException;
-import com.envisioniot.sub.common.model.dto.StreamMessage;
-
-public class sample {
-
-    public static void main(String[] args) throws SubscribeException {
-        String host = "subscription_server";
-        int port = 9001;
-        String accessKey = "access_key";
-        String secretKey = "secret_key";
-        String subId = "subscription_id";
-        String consumerGroup = "consumer_group"; 
-
-        /* Service */
-        EosClient eosClient = new EosClient(host, port, accessKey, secretKey);
-        IAlertService alertService = eosClient.getAlertService();
-
-        /* Handler */
-        IAlertHandler alertHandler = new IAlertHandler (){
-            @Override
-            public void alertRead(Alert alert) {
-                System.out.println(alert);
-            }
-        };
-
-        /* Subscribe */
-        alertService.subscribe(alertHandler, subId);
-        
-        /* Subscribe with consumer group (optional) */
-        alertService.subscribe(alertHandler, subId, consumerGroup);
-
-    }
-}
-```
 
 <!--end-->

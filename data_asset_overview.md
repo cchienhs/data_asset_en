@@ -16,7 +16,7 @@ Data storage policy must be configured before the devices start uploading data t
 
 ## Stream Analytics
 
-The essence of stream analytics is to ensure low-latency of stream data transmission and processing, as well as high accuracy of data analytics. To achieve these goals, EnOS Stream Analytics not only provides high throughput, low latency stream processing, but also accumulated the leading and most frequently used stream processing algorithms for certain industries. The service provides visualized template-based configuration to help you quickly perform your stream analytics tasks and task monitoring. For more information, see overview of [Stream Analytics](https://www.envisioniot.com/docs/data-asset/en/latest/learn/index.html).
+The essence of stream analytics is to ensure low-latency of stream data transmission and processing, as well as high accuracy of data analytics. To achieve these goals, EnOS Stream Analytics not only provides high throughput, low latency stream processing, but also accumulated the leading and most frequently used stream processing algorithms for certain industries. The service provides visualized template-based configuration to help you quickly perform your stream analytics tasks and task monitoring. For more information, see overview of [Stream Analytics](/docs/data-asset/en/dev/learn/index.html).
 
 ## Data Subscription
 
@@ -24,7 +24,7 @@ Data subscription service targets to improve the API calling efficiency of appli
 
 ## Data Service APIs
 
-EnOS Data Asset Management offering provides Data Service APIs for getting stored data in EnOS TSDB.
+EnOS Data Asset Management offering provides Data Service APIs for getting stored data in EnOS TSDB. For  detailed information, see [Getting Stored Data with EnOS APIs](/docs/data-asset/en/latest/howto/obtain/getting_stored_data.html).
 
 
 
@@ -34,7 +34,7 @@ EnOS Data Asset Management offering primarily serves the following roles:
 
 **Data Developer**
 
-Data developer, who configures data subscription settings, designs data processing streams, and defines data storage policies through the EnOS Console.
+Data developer, who defines data storage policies, designs stream data processing jobs, and configures data subscription settings through the EnOS Console.
 
 **Application Developer**
 

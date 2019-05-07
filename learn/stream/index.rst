@@ -9,8 +9,8 @@ EnOS Stream Analytics can be used in the following scenarios:
 
 - Aggregating and calculating asset raw data
 
-In most business scenarios, you might need to filter the raw data received from devices, aggregate the data by a certain algorithm, and save the aggregated data for further processing. 
-  
+In most business scenarios, you might need to filter the raw data received from devices, aggregate the data by a certain algorithm, and save the aggregated data for further processing.
+
 - Computation of device states
 
 In some business scenarios, you might need to obtain certain state parameters of a device to confirm its status. The stream analytics framework maintains the state of devices and sites internally. The system updates both the measure point values and the device connection status to the latest state.
@@ -42,11 +42,11 @@ The procedure of EnOS Stream Analytics is as follows:
 1. Processing of raw data
 
 Original measure point data is sent to Kafka through the EnOS connection layer. The messages received are analyzed by the stream computing process of measure points. Before processing, the data is filtered by the specified threshold. Data exceeding the threshold will be processed by interpolation algorithm.
-   
+
 2. Performing calculation
 
 In this step, data is computed by the defined algorithm in the processing strategy.
-   
+
 3. Output of computation
 
 The data from the streaming module flows into Redis and Kafka, and the downstream continues to subscribe all data from Kafka and record them to time series database (TSDB) and Hadoop distributed file system (HDFS). By default, data of the latest three months are reserved in TSDB to support real-time queries through the EnOS API, and the data in HDFS is used as the data source for offline data processing and further processing and analysis.
@@ -54,6 +54,7 @@ The data from the streaming module flows into Redis and Kafka, and the downstrea
 
 Data Processing Templates
 -----------------------------------
+
 .. toctree::
    :maxdepth: 1
 

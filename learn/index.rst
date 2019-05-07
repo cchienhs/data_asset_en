@@ -29,7 +29,7 @@ Features
    The computation models of stream computing are "event triggered". The trigger is the unbounded stream data mentioned in the previous section. Once new stream data is sent to the system, the system immediately initiates and performs a computation task. Therefore, stream computing is a continuous process.
 
 - Stream and real-time data integration
-   The result of stream computing triggered by stream data is recorded directly into the destination data storage. For example, the data can be directly written into the relational database (RDS) for report rendering. Therefore, the computing results of the stream data are continuously recorded into the target data storage.
+   The result of stream computing triggered by stream data is recorded directly into the destination data storage. For example, the data can be directly written into the time series database (TSDB) for report rendering. Therefore, the computing results of the stream data are continuously recorded into the target data storage.
 
 
 Data Processing Flow
@@ -44,13 +44,15 @@ The procedure of EnOS Stream Analytics is as follows:
    In this step, data is computed by the defined algorithm in the processing strategy.
 
 - Output of computation
-   The data from the streaming module flows into Redis and Kafka, and the downstream continues to subscribe all data from Kafka and record them to time series database (TSDB) and Hadoop distributed file system (HDFS). By default, data of the latest three months are reserved in TSDB to support real-time queries through the EnOS API, and the data in HDFS is used as the data source for offline data processing and further processing and analysis.
+   The data from the streaming module flows into Redis and Kafka, and the downstream continues to subscribe all data from Kafka and record them to time series database (TSDB) or other storage systems. The stored data can be used as the data source for offline data processing and further processing and analysis.
 
 
 Data Processing Templates
 -----------------------------------
+
 .. toctree::
    :maxdepth: 1
 
    ai_template_overview
    multi_point_overview
+   pi_template_overview
