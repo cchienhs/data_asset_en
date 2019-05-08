@@ -12,7 +12,7 @@ EnOS Data Asset Management offering targets to help you optimize your total cost
 
 EnOS provides a variety of data storage options for you based on your data storage and reading requirements. Data is stored by categories (data type and storage time), thus reducing data storage costs and enhancing data reading efficiency. 
 
-Data storage policy must be configured before the devices start uploading data to EnOS Cloud. Otherwise, the uploaded device data will not be stored in EnOS TSDB by default. For more information, see overview of [Storage Policy](learn/storage_policy_overview).
+Data storage policy must be configured before the devices start uploading data to EnOS Cloud. Otherwise, the uploaded device data will not be stored in EnOS TSDB by default. For more information, see [Storage Types](learn/storage_types).
 
 ## Stream Analytics
 
