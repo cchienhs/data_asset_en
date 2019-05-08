@@ -23,7 +23,7 @@ In the **Data Processing** section, click **New Strategy** to configure the data
 1. From the **Input Point** drop down list, select the model and measure point that provides electric meter reading data to be processed. The input point type must be numeral (int, float, or double).
 
 2. From the **Slope Threshold** drop-down list, select a slope threshold policy to filter out the invalid data. 
-   
+  
    For example, (0, max] indicates that if the slope of the time interval falls in the range of 0 - max, the electric meter reading data is valid. Invalid data will not be added to the total electric power data. For detailed information about the slope, see [Electric Power Calculation Logic](../../reference/power_calculation_logic).
 
    You can specify the slope threshold in the following ways:
@@ -49,8 +49,6 @@ In the **Data Processing** section, click **New Strategy** to configure the data
 ## Example
 
 The following example shows the configuration of a typical electric power calculation job:
-
-To be added...
 
 .. image:: ../../media/pi_stream_sample.png
 

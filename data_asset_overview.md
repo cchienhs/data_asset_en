@@ -16,7 +16,7 @@ Data storage policy must be configured before the devices start uploading data t
 
 ## Stream Analytics
 
-The essence of stream analytics is to ensure low-latency of stream data transmission and processing, as well as high accuracy of data analytics. To achieve these goals, EnOS Stream Analytics not only provides high throughput, low latency stream processing, but also accumulated the leading and most frequently used stream processing algorithms for certain industries. The service provides visualized template-based configuration to help you quickly perform your stream analytics tasks and task monitoring. For more information, see overview of [Stream Analytics](/docs/data-asset/en/dev/learn/index.html).
+The essence of stream analytics is to ensure low-latency of stream data transmission and processing, as well as high accuracy of data analytics. To achieve these goals, EnOS Stream Analytics not only provides high throughput, low latency stream processing, but also accumulated the leading and most frequently used stream processing algorithms for certain industries. The service provides visualized template-based configuration to help you quickly perform your stream analytics tasks and task monitoring. For more information, see overview of [Stream Analytics](/docs/data-asset/en/latest/learn/index.html).
 
 ## Data Subscription
 

@@ -18,6 +18,8 @@ A GUI is available for you to customize the data subscription configuration, suc
 
 Java SDK is provided for you to consume subscribed data in your applications.
 
+For detailed information about creating data subscription jobs, see [Developing Data Subscription Jobs](/docs/data-asset/en/latest/howto/obtain/managing_data_subscription.html).
+
 ## Advantages
 
 - Decoupling data production and data consumption. 

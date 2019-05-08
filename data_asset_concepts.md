@@ -14,7 +14,7 @@ The common sources of stream data can be the devices connected to a data center,
 
 Data ingested from different devices and sensors is of different types. EnOS Stream Analytics supports analysis and storage of multiple types of data, including AI, DI, PI and generic types. The data types of measure points are defined when creating device models. 
 
-## Storage Storage
+## Data Storage
 
 Data ingested from devices or integrated from offline message channels, after being processed by the stream processing engine, can be stored in the target storage system based on the configured storage policies. According to data types and usage, data can be stored in different systems, for different storage time, and be retrieved by different methods.  
 

@@ -14,7 +14,7 @@ When assets are connected into the EnOS cloud, the asset raw data is ingested th
 
    - User-defined logic: you can design real-time data processing streams through the **Stream Development** function in the EnOS Console. 
 
-     For more information about designing data processing jobs, see [Developing a Stream Processing Job](/docs/data-asset/en/dev/howto/stream/index.html).  
+     For more information about designing data processing jobs, see [Developing a Stream Processing Job](/docs/data-asset/en/latest/howto/stream/index.html).  
 
    - System logic: the system built-in logic that completes operations like data format conversion.
 
