@@ -58,13 +58,13 @@ After the subscription topic is configured, click **Save** to save the configura
 
 EnOS provides Java SDK to help developers with offline application development and data consumption.
 
-- Add [Maven dependency](https://mvnrepository.com/artifact/com.envisioniot/enos-subscribe/2.0.0) for the SDK. See the following example:
+- Add [Maven dependency](https://mvnrepository.com/artifact/com.envisioniot/enos-subscribe/2.2.0) for the SDK. See the following example:
 
 ```
 <dependency>
   <groupId>com.envisioniot</groupId>
   <artifactId>enos-subscribe</artifactId>
-  <version>2.0.0</version>
+  <version>2.2.0</version>
 </dependency>
 ```
 
