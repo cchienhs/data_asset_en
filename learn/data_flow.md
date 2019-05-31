@@ -24,13 +24,15 @@ See the following illustration of data flow in the engine layer:
 
 ## Storage Layer
 
-Data in the Origin Data Topic and the Cal Data Topic are written to both **Redis** and **TSDB**.
+Data in the Origin Data Topic and the Cal Data Topic are written to **In-memory Database (IMDB)**, **Time Series Database (TSDB)**, and **Data Archiving (Archive)** storage.
 
-- Redis: stores only the latest data for fast query.
+- IMDB: stores only the latest data for fast query.
 
-- TSDB: stores time-series data of specified time range based on the storage policies that you can define through the **Storage Policy** function in the EnOS Console. The stored data can be retrieved through APIs: `getAssetsRawDataByTimeRange`, `getAssetsAIRawData`, `getAssetsAINormalizedData`, `getAssetsStatusData`, `getAssetsCurrentDayElectricPower,` `getAssetsElectricPowerData`, and `getAssetsGenericData`. 
+- TSDB: stores time series data of specified time range based on the storage policies that you define in the EnOS Console. The stored data can be retrieved through APIs: `getAssetsRawDataByTimeRange`, `getAssetsAIRawData`, `getAssetsAINormalizedData`, `getAssetsStatusData`, `getAssetsCurrentDayElectricPower,` `getAssetsElectricPowerData`, and `getAssetsGenericData`. 
 
-   For more information about storage policy, see [Managing Data Storage](/docs/data-asset/en/latest/howto/storage/index.html).
+- Archive: archives asset data based on the data archiving policy that you define in the EnOS Console. 
+
+   For more information about the types of data storage, see [Storage Types](storage_types).
 
 See the following illustration of data flow in the storage layer:
 

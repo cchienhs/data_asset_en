@@ -15,7 +15,7 @@ EnOS Stream Analytics can be used in the following scenarios:
    In most business scenarios, you might need to filter the raw data received from devices, aggregate the data by a certain algorithm, and save the aggregated data for further processing.
 
 - Computation of device states
-   In some business scenarios, you might need to obtain certain state parameters of a device to confirm its status. The stream analytics framework maintains the state of devices and sites internally. The system updates both the measure point values and the device connection status to the latest state.
+   In some business scenarios, you might need to obtain certain state parameters of a device to confirm its status. The stream analytics framework maintains the state of devices and sites internally. The system updates both the measuring point values and the device connection status to the latest state.
 
 
 Features
@@ -38,13 +38,13 @@ Data Processing Flow
 The procedure of EnOS Stream Analytics is as follows:
 
 - Processing of raw data
-   Original measure point data is sent to Kafka through the EnOS connection layer. The messages received are analyzed by the stream computing process of measure points. Before processing, the data is filtered by the specified threshold. Data exceeding the threshold will be processed by interpolation algorithm.
+   Original measuring point data is sent to Kafka through the EnOS connection layer. The messages received are analyzed by the stream computing process of measuring points. Before processing, the data is filtered by the specified threshold. Data exceeding the threshold will be processed by interpolation algorithm.
 
 - Performing calculation
    In this step, data is computed by the defined algorithm in the processing strategy.
 
 - Output of computation
-   The data from the streaming module flows into Redis and Kafka, and the downstream continues to subscribe all data from Kafka and record them to time series database (TSDB) or other storage systems. The stored data can be used as the data source for offline data processing and further processing and analysis.
+   The data from the streaming module flows into In-memory Database (IMDB) and Kafka, and the downstream continues to subscribe all data from Kafka and record them to time series database (TSDB) or other storage systems. The stored data can be used as the data source for offline data processing and further processing and analysis.
 
 
 Data Processing Templates

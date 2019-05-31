@@ -1,10 +1,10 @@
 # Time Window
 
-When using the Window Aggregation for AI template to develop stream processing jobs, you need to configure the window strategy. Detailed introduction to the time window is as follows:
+When using the Window Aggregation template to develop stream processing jobs, you need to configure the window strategy. Detailed introduction to the time window is as follows:
 
 ## Event time
 
-In general, event time (time when an event occurs) is used in AI data aggregation. More precisely, every event has a corresponding time stamp, and the times tamp is part of the data record. Event time is actually a time stamp. When event time is used to define time windows, the stream processing engine can deal with disorderly time flow and variable event time deviation, and compute meaningful results based on the actual time of events.
+In general, event time (time when an event occurs) is used in data aggregation. More precisely, every event has a corresponding time stamp, and the time stamp is part of the data record. Event time is actually a time stamp. When event time is used to define time windows, the stream processing engine can deal with disorderly time flow and variable event time deviation, and compute meaningful results based on the actual time of events.
 
 ## Time window
 
@@ -18,7 +18,7 @@ Tumbling windows have a fixed size and do not overlap. Data belonging to a windo
 
 ## Window latency
 
-Generally, when a window closes, the data processing in the window should have been completed, and a new window will be started. However, device data transfer might be delayed because of various factors like device failure and transmission efficiency. Latency setting is introduced to specify the extended validity time of the window after it closes. Late data arriving within the allowed lateness will be added to the window and computed again. Late data arriving after the allowed lateness will be ignored. In the following example, window size is 5 minutes, and window2 contains data falling in the time range of 11:00 - 11:05. If latency is not enabled, window2 will be closed at 11:05, and data1 and data2 that are arriving late will be ignored. If a latency of 5 minutes is enabled, data1 will be added to window2 for computing again, but data2 will be ignored.
+Generally, when a window closes, the data processing in the window should have been completed, and a new window will be started. However, device data transfer might be delayed because of various factors like device failure and transmission efficiency. Latency setting is introduced to specify the extended validity time of the window after it closes. Late data arriving within the allowed lateness will be added to the window and computed again. Late data arriving after the allowed lateness will be ignored. In the following example, window size is 5 minutes, and *window2* contains data falling in the time range of 11:00 - 11:05. If latency is not enabled, *window2* will be closed at 11:05, and *data1* and *data2* that are arriving late will be ignored. If a latency of 5 minutes is enabled, *data1* will be added to *window2* for computing again, but *data2* will be ignored.
 
 .. image:: ../media/latency_setting.png
 

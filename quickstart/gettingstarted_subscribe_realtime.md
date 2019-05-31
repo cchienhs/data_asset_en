@@ -12,7 +12,7 @@ This guide introduces how to configure real-time data subscription on EnOS Conso
 
 **Goal**
 
-The goal of this guide is to subscribe to the real-time data of the *test_raw* measure point.
+The goal of this guide is to subscribe to the real-time data of the *test_raw* measuring point.
 
 **Data Preparation**
 
@@ -20,7 +20,7 @@ The goal of this guide is to subscribe to the real-time data of the *test_raw*�
 
 | Feature Type  | Name     | Identifier | Point Type | Data Type |
 |:--------------|:---------|:-----------|:-----------|:----------|
-| Measure Point | test_raw | test_raw   | AI         | DOUBLE    |
+| Measuring Point | test_raw | test_raw   | AI         | DOUBLE    |
 
 For information about device connection and data ingestion, see [Device Connection](https://www.envisioniot.com/docs/device-connection/en/latest/quickstart/gettingstarted_device_connection.html).
 
@@ -33,7 +33,7 @@ The steps for subscribing and consuming real-time data are as follows:
 - Get subscribed data with Java SDK
 - Check the data consumption results
 
-## Step 1. Create and configure a data subscription topic
+## Step 1. Create and Configure a Data Subscription Topic
 
 Log in EnOS Console and select the **Data Subscription** module. All the subscription topics created for the current organization are listed in the table. Take the following steps to create and configure a real-time data subscription topic.
 
@@ -45,15 +45,15 @@ Log in EnOS Console and select the **Data Subscription** module. All the subscri
 
 4. **Select data to be subscribed**: Each SA can access the data of multiple clients (through purchasing applications). Select the clients whose data are to be subscribed to.
 
-5. **Set model and measure point filter**: Select the model and measure points to be subscribed to. For this guide, select *test_raw* the *testModel*. The subscription system will filter data to meet the specified conditions.
+5. **Set model and measuring point filter**: Select the model and measuring points to be subscribed to. For this guide, select *test_raw* the *testModel*. The subscription system will filter data to meet the specified conditions.
 
 6. **Set device tag filter**: Specify tags of devices so that data of the selected devices will be subscribed to.
 
-## Step 2. Save and enable the subscription topic
+## Step 2. Save and Enable the Subscription Topic
 
 After the subscription topic is configured, click **Save** to save the configuration. On the **Data Subscription** page, find the saved topic, click the **Enable** icon to run the subscription topic.
 
-## Step 3. Get subscribed data with Java SDK
+## Step 3. Get Subscribed Data with Java SDK
 
 EnOS provides Java SDK to help developers with offline application development and data consumption.
 - Add [Maven dependency](https://mvnrepository.com/artifact/com.envisioniot/enos-subscribe/2.0.0) for the SDK. See the following example:
@@ -72,12 +72,12 @@ EnOS provides Java SDK to help developers with offline application development a
 ```
 String sub_server_host ="sub_server_host";
 int sub_server_port ="sub_server_port";
-String accessKey ="accessKey";
-String accessSecret ="accessSecret";
+String accessKey ="access_Key";
+String secretKey ="secret_Key";
 String subId = "subscriptionId";
 
 /* service */
-EOSClient eosClient = new EOSClient(sub_server_host, sub_server_port, accessKey, accessSecret);
+EOSClient eosClient = new EOSClient(sub_server_host, sub_server_port, accessKey, secretKey);
 IDataService dataService = eosClient.getDataService();
 
 /* handler */
@@ -98,6 +98,6 @@ dataService.subscribe(dataHandler, subId, consumerGroup);
 
 For more information about the SDK, see [Data Subscription SDK Reference](../reference/data_subscription_sdk).
 
-## Step 4. Check the data consumption results
+## Step 4. Check the Data Consumption Results
 
 Run the application for data consumption and check the data consumption results in the logs of the application.

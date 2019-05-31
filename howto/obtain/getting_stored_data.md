@@ -8,13 +8,13 @@ For each TSDB storage type, you can invoke a data service API to get the stored 
 
 | API Name                           | Function                                                     | Usage Note                                                   |
 | ---------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| `getAssetsAIRawData`               | Get asset data stored as the **AI Raw Data** storage type in TSDB. | Query the stored data by combination of device model ID, asset IDs, measure point IDs, and time rage. |
-| `getAssetsAINormalizedData`        | Get asset data stored as the **AI Normalized Data** storage type in TSDB. | Query the stored data by combination of device model ID, asset IDs, measure point IDs with data aggregation logic, aggregation time interval, and time range. Note that if data aggregation logic is NOT used, the value of the `interval` parameter must be 0. |
-| `getAssetsStatusData`              | Get asset data stored as the **DI Data** storage type in TSDB. | Query the status change data of devices by combination of device model ID, asset IDs, measure point IDs, and time rage. |
-| `getAssetsCurrentDayElectricPower` | Get asset current day electric power data.                   | Query the current day electric power data of devices by combination of device model ID, asset IDs, and measure point IDs (calculation starts from 00:00 of the current day). |
-| `getAssetsElectricPowerData`       | Get asset electric power data stored as the **PI Data** storage type in TSDB. | Query the stored electric power data by combination of device model ID, asset IDs, measure point IDs with data aggregation logic, aggregation time interval, and time range. Note that if data aggregation logic is NOT used, the value of the `interval` parameter must be 0. |
-| `getAssetsGenericData`             | Get asset data stored as the **Generic Data** storage type in TSDB. | Query the stored generic data by combination of device model ID, asset IDs, measure point IDs, and time rage. |
-| `getAssetsRawDataByTimeRange`      | Get asset data stored as the **AI Raw Data**, **DI Data**, and **Generic Data** storage types in TSDB. | Query the stored asset raw data by combination of device model ID, asset IDs, measure point IDs, and time rage. |
+| `getAssetsAIRawData`               | Get asset data stored as the **AI Raw Data** storage type in TSDB. | Query the stored data by combination of device model ID, asset IDs, measuring point IDs, and time rage. |
+| `getAssetsAINormalizedData`        | Get asset data stored as the **AI Normalized Data** storage type in TSDB. | Query the stored data by combination of device model ID, asset IDs, measuring point IDs with data aggregation logic, aggregation time interval, and time range. Note that if data aggregation logic is NOT used, the value of the `interval` parameter must be 0. |
+| `getAssetsStatusData`              | Get asset data stored as the **DI Data** storage type in TSDB. | Query the status change data of devices by combination of device model ID, asset IDs, measuring point IDs, and time rage. |
+| `getAssetsCurrentDayElectricPower` | Get asset current day electric power data.                   | Query the current day electric power data of devices by combination of device model ID, asset IDs, and measuring point IDs (calculation starts from 00:00 of the current day). |
+| `getAssetsElectricPowerData`       | Get asset electric power data stored as the **PI Data** storage type in TSDB. | Query the stored electric power data by combination of device model ID, asset IDs, measuring point IDs with data aggregation logic, aggregation time interval, and time range. Note that if data aggregation logic is NOT used, the value of the `interval` parameter must be 0. |
+| `getAssetsGenericData`             | Get asset data stored as the **Generic Data** storage type in TSDB. | Query the stored generic data by combination of device model ID, asset IDs, measuring point IDs, and time rage. |
+| `getAssetsRawDataByTimeRange`      | Get asset data stored as the **AI Raw Data**, **DI Data**, and **Generic Data** storage types in TSDB. | Query the stored asset raw data by combination of device model ID, asset IDs, measuring point IDs, and time rage. |
 
 ## EnOS API SDK for Java
 
@@ -32,7 +32,7 @@ EnOS provides an API SDK to help you calling the EnOS service APIs and developin
    </dependency>
    ```
 
-Optionally, you can download the source code of the EnOS API SDK from [GitHub](https://github.com/EnvisionIot/enos-api-sdk-java) and install it in your development environment. 
+Optionally, you can download the source code of the EnOS API SDK from [GitHub](https://github.com/EnvisionIot/enos-api-sdk-java) and install it in your development environment.
 
 For more information about how to work with EnOS SDK, see [Getting Started with EnOS SDKs](https://www.envisioniot.com/docs/app-development/en/latest/gettingstarted_sdk.html).
 

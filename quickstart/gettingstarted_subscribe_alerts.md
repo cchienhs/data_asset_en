@@ -12,7 +12,7 @@ This guide introduces how to configure alert data subscription on EnOS Console a
 
 **Goal**
 
-The goal of this guide is to configure subscription to the alert data of measure point *test_raw*.
+The goal of this guide is to configure subscription to the alert data of measuring point *test_raw*.
 
 **Data Preparation**
 
@@ -20,9 +20,9 @@ The goal of this guide is to configure subscription to the alert data of measure
 
 | Feature Type  | Name     | Identifier | Point Type | Data Type |
 |:--------------|:---------|:-----------|:-----------|:----------|
-| Measure Point | test_raw | test_raw   | AI         | DOUBLE    |
+| Measuring Point | test_raw | test_raw   | AI         | DOUBLE    |
 
-- **Data ingestion**: Alert settings are configured for monitoring the data of the *test_raw* measure point. For information about data ingestion, see [Device Connection](https://www.envisioniot.com/docs/device-connection/en/latest/quickstart/gettingstarted_device_connection.html).
+- **Data ingestion**: Alert settings are configured for monitoring the data of the *test_raw* measuring point. For information about data ingestion, see [Device Connection](https://www.envisioniot.com/docs/device-connection/en/latest/quickstart/gettingstarted_device_connection.html).
 - **Alert Configuration**: For information about alert configuration for devices, see [Alert Management](https://www.envisioniot.com/docs/device-connection/en/latest/howto/alert/alert_overview.html).
 
 ## Procedure
@@ -34,7 +34,7 @@ The steps for subscribing and consuming alert data are as follows:
 - Get subscribed data with Java SDK
 - Check the data consumption results
 
-## Step 1. Create and configure a data subscription topic
+## Step 1. Create and Configure a Data Subscription Topic
 
 Log in EnOS Console and select the **Subscription Service** module. All the subscription topics created for the current organization are listed in the table. Take the following steps to create and configure an alert data subscription topic.
 
@@ -50,11 +50,11 @@ Log in EnOS Console and select the **Subscription Service** module. All the subs
 
 6. **Set device tag filter**: Specify tags of devices so that data of the selected devices will be subscribed to.
 
-## Step 2. Save and enable the subscription topic
+## Step 2. Save and Enable the Subscription Topic
 
 After the subscription topic is configured, click **Save** to save the configuration. On the **Data Subscription** page, find the saved topic, click the **Enable** icon to start the subscription topic.
 
-## Step 3. Get subscribed data with Java SDK
+## Step 3. Get Subscribed Data with Java SDK
 
 EnOS provides Java SDK to help developers with offline application development and data consumption.
 
@@ -73,13 +73,13 @@ EnOS provides Java SDK to help developers with offline application development a
 ```
 String sub_server_host ="sub_server_host";
 int sub_server_port ="sub_server_port";
-String accessKey ="accessKey";
-String accessSecret ="accessSecret";
+String accessKey ="access_Key";
+String secretKey ="secret_Key";
 String subId = "subscriptionId";
 String consumerGroup = "consumerGroup";
 
 /* service */
-EOSClient eosClient = new EOSClient(sub_server_host, sub_server_port, accessKey, accessSecret);
+EOSClient eosClient = new EOSClient(sub_server_host, sub_server_port, accessKey, secretKey);
 IAlertService alertService = eosClient.getAlertService();
 
 /* handler */
@@ -101,6 +101,6 @@ alertService.subscribe(alertHandler, subId, consumerGroup);
 
 For more information about the SDK, see [Data Subscription SDK Reference](../reference/data_subscription_sdk).
 
-## Step 4. Check the data consumption results
+## Step 4. Check the Data Consumption Results
 
 Run the application for data consumption and check the data consumption results in the logs of the application.

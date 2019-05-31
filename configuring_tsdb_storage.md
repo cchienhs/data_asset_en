@@ -16,10 +16,10 @@ Features of the AI Raw Data storage type are as follows:
 
 | Feature              | Description                                                                                                         |
 |:---------------------|:--------------------------------------------------------------------------------------------------------------------|
-| Data type            | AI type data only (the data type is selected when defining a measure point)                                         |
-| Data source          | Measure point raw data uploaded to the cloud (or normalized data processed by the streaming engine)                 |
+| Data type            | AI type data only (the data type is selected when defining a measuring point)                                         |
+| Data source          | Measuring point raw data uploaded to the cloud (or normalized data processed by the streaming engine)                 |
 | Storage time         | Based on business needs (it is recommended to select a short storage time due to the huge data size)                |
-| API for reading data | `getAssetsAIRawData` (getting the stored AI raw data of certain measure points of specified assets in a time range) |
+| API for reading data | `getAssetsAIRawData` (getting the stored AI raw data of certain measuring points of specified assets in a time range) |
 
 Take the following steps to configure AI Raw Data storage type:
 
@@ -29,7 +29,7 @@ Take the following steps to configure AI Raw Data storage type:
 
 3. From the **Storage Time** drop down list, select the storage time for your data.
 
-4. Select models and the corresponding measure points for which the data storage policy serves.
+4. Select models and the corresponding measuring points for which the data storage policy serves.
 
 5. Click **OK** to save the storage policy. See the following example.
 
@@ -43,11 +43,11 @@ Features of the AI Normalized Data storage type are as follows:
 
 | Feature                  | Description                                                                                                                                                                                                                                                                                                                             |
 |:-------------------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Data type                | AI type data only (the data type is selected when defining a measure point)                                                                                                                                                                                                                                                             |
-| Data source              | Normalized data processed by the streaming engine (or measure point raw data uploaded to the cloud)                                                                                                                                                                                                                                     |
+| Data type                | AI type data only (the data type is selected when defining a measuring point)                                                                                                                                                                                                                                                             |
+| Data source              | Normalized data processed by the streaming engine (or measuring point raw data uploaded to the cloud)                                                                                                                                                                                                                                     |
 | Normalization processing | If the data source is AI raw data, the second-level suffix of the data timestamp will be removed when the data is stored in TSDB. Therefore, only the last-coming data record of a minute will be stored.                                                                                                                               |
 | Storage time             | Based on business needs (can be a longer time due to the smaller data size)                                                                                                                                                                                                                                                             |
-| API for reading data     | `getAssetsAINormalizedData` (getting the stored minute-level normalized AI data of certain measure points of specified assets in a time range)                                                                                                                                                                                          |
+| API for reading data     | `getAssetsAINormalizedData` (getting the stored minute-level normalized AI data of certain measuring points of specified assets in a time range)                                                                                                                                                                                          |
 | Aggregation functions    | TSDB provides aggregation functions for further processing the stored data when retrieving data with the `getAssetsAINormalizedData` API. Supported aggregation functions are `cnt`, `avg`, `sum`, `max`, `min`, `first`, and `last`. Note that if data aggregation logic is NOT used, the value of the `interval` parameter must be 0. |
 
 The configuration of the **AI Normalized Data** storage type is similar with that of the **AI Raw Data** storage type. See the following example.
@@ -62,8 +62,8 @@ Features of the DI Data storage type are as follows:
 
 | Feature              | Description                                                                                |
 |:---------------------|:-------------------------------------------------------------------------------------------|
-| Data type            | DI type data only (the data type is selected when defining a measure point)                |
-| Data source          | Measure point raw data uploaded to the cloud                                               |
+| Data type            | DI type data only (the data type is selected when defining a measuring point)                |
+| Data source          | Measuring point raw data uploaded to the cloud                                               |
 | Storage time         | Based on business needs (can be a long time due to the small data size)                    |
 | API for reading data | `getAssetsStatusData` (Getting the status change data of specified assets in a time range) |
 
@@ -79,10 +79,10 @@ Features of the PI Data storage type are as follows:
 
 | Feature              | Description                                                                                                                                                                                                                                                           |
 |:---------------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Data type            | PI type data only (the data type is selected when defining a measure point)                                                                                                                                                                                           |
-| Data source          | Minute-level normalized PI data (If the measure point data is second-level raw data, the suffix of the data time stamp will be removed when the data is stored in TSDB)                                                                                               |
+| Data type            | PI type data only (the data type is selected when defining a measuring point)                                                                                                                                                                                           |
+| Data source          | Minute-level normalized PI data (If the measuring point data is second-level raw data, the suffix of the data time stamp will be removed when the data is stored in TSDB)                                                                                               |
 | Storage time         | Based on business needs (can be a longer time due to the smaller data size)                                                                                                                                                                                           |
-| API for reading data | `getAssetsElectricPowerData` (Getting the stored PI data of certain measure points of specified assets in a time range); `getAssetsCurrentDayElectricPower` (Getting the current day electric power data of specified assets, starting from 00:00 of the current day) |
+| API for reading data | `getAssetsElectricPowerData` (Getting the stored PI data of certain measuring points of specified assets in a time range); `getAssetsCurrentDayElectricPower` (Getting the current day electric power data of specified assets, starting from 00:00 of the current day) |
 
 The configuration of the **PI Data** storage type is similar with that of the **AI Raw Data** storage type.
 
@@ -90,16 +90,16 @@ The configuration of the **PI Data** storage type is similar with that of the **
 
 ## Configuring Generic Data Storage Type
 
-When configuring device models, you can choose AI, DI, PI, or Generic as the data type of a measure point. EnOS TSDB provides separate storage policy for generic data.
+When configuring device models, you can choose AI, DI, PI, or Generic as the data type of a measuring point. EnOS TSDB provides separate storage policy for generic data.
 
 Features of the Generic Data storage type are as follows:
 
 | Feature              | Description                                                                                                      |
 |:---------------------|:-----------------------------------------------------------------------------------------------------------------|
-| Data type            | Generic type data only (the data type is selected when defining a measure point)                                 |
-| Data source          | Measure point raw data uploaded to the cloud                                                                     |
+| Data type            | Generic type data only (the data type is selected when defining a measuring point)                                 |
+| Data source          | Measuring point raw data uploaded to the cloud                                                                     |
 | Storage time         | Based on business needs                                                                                          |
-| API for reading data | `getAssetsGenericData` (getting the generic data of certain measure points of specified assets in a time range.) |
+| API for reading data | `getAssetsGenericData` (getting the generic data of certain measuring points of specified assets in a time range.) |
 
 The configuration of the **Generic Data** storage type is similar with that of the **AI Raw Data** storage type.
 

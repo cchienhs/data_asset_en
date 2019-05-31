@@ -1,24 +1,24 @@
 # Multi-Point Aggregation Template
 
-In IoT business scenarios, the data of a measure point might be calculated from the data of other measurement points of the same device. For example, *point_C = point_A + point_B*. In which, *point_A* and *point_B* are measure points for ingesting asset raw data. EnOS Stream Analytics provides a Multi-Point Aggregation template to enable data calculation among multiple measure points of the same device.
+In IoT business scenarios, the data of a measuring point might be calculated from the data of other measuring points of the same device. For example, *point_C = point_A + point_B*. In which, *point_A* and *point_B* are measuring points for ingesting asset raw data. EnOS Stream Analytics provides a Multi-Point Aggregation template to enable data calculation among multiple measuring points of the same device.
 
 ## Features
 
 **Data aggregation for multiple points**
 
-Supporting calculation among multiple measure points of the same device, and associated calculation with master data as well.
+Supporting calculation among multiple measuring points of the same device, and associated calculation with master data as well.
 
 **Triggering mode setting**
 
-Data processing can be triggered by the data arrival of a measure point or by fixed frequency.
+Data processing can be triggered by the data arrival of a measuring point or by fixed frequency.
 
 **Time series interpolation**
 
- Supporting time series interpolation strategy (if the data of a measure point does not arrive when calculation starts, the latest data of the measure point will be used for calculation).
+ Supporting time series interpolation strategy (if the data of a measuring point does not arrive when calculation starts, the latest data of the measuring point will be used for calculation).
 
 **Strong syntax for calculation expressions**
 
-Supporting autocomplete of defined models, measure points, and attributes when writing output logic expressions. For detailed information, see [Multi-Point Aggregation Expression Syntax](../reference/statement_syntax).
+Supporting autocomplete of defined models, measuring points, and attributes when writing output logic expressions. For detailed information, see [Multi-Point Aggregation Expression Syntax](../reference/statement_syntax).
 
 ## Configuring Multi-Point Data Aggregation Jobs
 

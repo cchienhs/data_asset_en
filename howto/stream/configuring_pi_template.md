@@ -1,6 +1,6 @@
-# Configuring Electric Power Calculation Job
+# Configuring an Electric Power Calculation Job
 
-Use the **Electric Power Calculation** template to quickly create a stream processing job for calculating electric power data uploaded from electric meters. The total electric power data or detailed data in a time interval will be assigned to measure points in the same model.
+Use the **Electric Power Calculation** template to quickly create a stream processing job for calculating electric power data uploaded from electric meters. The total electric power data or detailed data in a time interval will be assigned to measuring points in the same model.
 
 ## Configuring Calculation Settings
 
@@ -11,7 +11,7 @@ In the **Calculation Settings** section, view and configure the following settin
 
 2. The supported calculation method is **Sum of meter reading delta**. The daily electric power data is equal to the sum of data in all time intervals of the day. For detailed information about the calculation method, see [Electric Power Calculation Logic](../../reference/power_calculation_logic).
 
-3. Select whether you need detailed output of electric power data by fixed intervals. 
+3. Select whether you need detailed output of electric power data by fixed intervals.
 
 
 ## Configuring Data Processing Policy
@@ -20,10 +20,10 @@ In the **Data Processing** section, click **New Strategy** to configure the data
 
 .. note:: The input point, output point, and the model attributes that are bound to the slope threshold and scale must belong to the same model. The input point cannot be the output point.
 
-1. From the **Input Point** drop down list, select the model and measure point that provides electric meter reading data to be processed. The input point type must be numeral (int, float, or double).
+1. From the **Input Point** drop down list, select the model and measuring point that provides electric meter reading data to be processed. The input point type must be numeral (int, float, or double).
 
-2. From the **Slope Threshold** drop-down list, select a slope threshold policy to filter out the invalid data. 
-  
+2. From the **Slope Threshold** drop-down list, select a slope threshold policy to filter out the invalid data.
+
    For example, (0, max] indicates that if the slope of the time interval falls in the range of 0 - max, the electric meter reading data is valid. Invalid data will not be added to the total electric power data. For detailed information about the slope, see [Electric Power Calculation Logic](../../reference/power_calculation_logic).
 
    You can specify the slope threshold in the following ways:
@@ -36,11 +36,11 @@ In the **Data Processing** section, click **New Strategy** to configure the data
    - **Fixed scale**: Enter a numeric value for the scale.
    - **Bind to model attribute**: Define the scale with a model attribute.
 
-4. From the **Daily Output** field, select a measure point to store the output of daily electric power data. The type of the output point must be PI.
+4. From the **Daily Output** field, select a measuring point to store the output of daily electric power data. The type of the output point must be PI.
 
 5. If "Output by Fixed Interval" is enabled, select the corresponding output point and time interval:
 
-   - **Detailed Output**: Select a measure point to receive the detailed output. The type of the output point must be PI.
+   - **Detailed Output**: Select a measuring point to receive the detailed output. The type of the output point must be PI.
    - **Interval**: Select a time interval for the detailed output.
 
 6. Click **OK** to complete the configuration.
@@ -54,4 +54,4 @@ The following example shows the configuration of a typical electric power calcul
 
 ## Next Steps
 
-[Saving and Publishing Stream Processing Jobs](publishing_job)
+[Publishing the Stream Processing Job](publishing_job)

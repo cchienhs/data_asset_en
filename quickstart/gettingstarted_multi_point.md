@@ -1,6 +1,6 @@
 # Processing Multi-Point Data
 
-This guide intends to help you learn how to process data of multiple measure points with the Multi-Point Aggregation template.
+This guide intends to help you learn how to process data of multiple measuring points with the Multi-Point Aggregation template.
 
 ## Prerequisites
 
@@ -33,9 +33,9 @@ The goal of this guide is to get the sum of the raw data ingesting points *testA
 
 | Feature Type  | Name      | Identifier | Point Type | Data Type |
 |:--------------|:----------|:-----------|:-----------|:----------|
-| Measure Point | testA_raw | testA_raw  | AI         | DOUBLE    |
-| Measure Point | testB_raw | testB_raw  | AI         | DOUBLE    |
-| Measure Point | testC     | testC      | AI         | DOUBLE    |
+| Measuring Point | testA_raw | testA_raw  | AI         | DOUBLE    |
+| Measuring Point | testB_raw | testB_raw  | AI         | DOUBLE    |
+| Measuring Point | testC     | testC      | AI         | DOUBLE    |
 
 - Storage configuration: Configuring data storage policy for the 3 points (as either AI raw data or AI normalized data). For more information, see [Configuring TSDB Storage](https://www.envisioniot.com/docs/data-asset/en/latest/configuring_tsdb_storage.html).
 
@@ -61,15 +61,15 @@ The goal of this guide is to get the sum of the raw data ingesting points *testA
      ${testModel::testA_raw}+${testModel::testB_raw}
      ```
 
-## Step 2. Save and Release the Job
+## Step 2. Save and Publish the Job
 
-When the job configuration is completed, you can save and release the multi point data processing job online. See the following sample configuration:
+When the job configuration is completed, you can save and publish the multi point data processing job online. See the following sample configuration:
 
 .. image:: ../media/multi_point_strategy.png
 
 ## Step 3. Start the Job
 
-On the **Stream Operation** page, find the released job in the table, and click the **Start** icon |start_icon| for the job in the **Operations** column to start running the data processing job.
+On the **Stream Operation** page, find the published job in the table, and click the **Start** icon |start_icon| for the job in the **Operations** column to start running the data processing job.
 
 ## Step 4. View the Running Results of the Job
 
@@ -79,7 +79,7 @@ On the **Stream Operation** page, find the running job in the table, and click t
 
 - **Log**: Click the **View Logs** icon on the upper right corner to check the running log of the job.
 
-- **Results**: Call the `getAssetsRawDataByTimeRange` API to get the data of point *testC*. For more information, see [Calling EnOS REST APIs](https://www.envisioniot.com/docs/app-development/en/latest/call_enos_api.html).
+- **Results**: Call the `getAssetsRawDataByTimeRange` API to get the data of point *testC*. For more information, see [Getting Stored Data with EnOS APIs](../howto/obtain/getting_stored_data.html).
 
 .. |start_icon| image:: ../media/start_icon.png
 

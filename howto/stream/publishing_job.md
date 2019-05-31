@@ -16,4 +16,4 @@ After the stream processing job is published online, you can start it on the **S
 
 ## Next Steps
 
-[Monitoring Stream Processing Jobs](monitoring_job)
+[Monitoring the Stream Processing Job](monitoring_job)

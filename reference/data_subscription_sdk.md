@@ -12,12 +12,12 @@ The data subscription SDK reference is as follows:
      - Description
      - Parameter
      - Response
-   * - EosClient(String host,int port,String accessKey,String accessSecret)
+   * - EosClient(String host,int port,String accessKey,String secretKey)
      - Initiate constructed function.
      - + host: Subscription service host
        + port
        + accessKey
-       + accessSecret: Secret of the accessKey
+       + secretKey: Secret of the accessKey
      - EosClient instance
    * - getDataService()
      - Get real-time data subscription service instance.
@@ -56,7 +56,7 @@ The data subscription SDK reference is as follows:
      - Response
    * - dataRead(MeasurePoint point)
      - Read the subscribed real-time data.
-     - point：Subscribed measure point data
+     - point：Subscribed measuring point data
      - null
 
 
@@ -71,12 +71,12 @@ The data subscription SDK reference is as follows:
      - Description
      - Parameter
      - Response
-   * - EosClient(String host,int port,String accessKey,String accessSecret)
+   * - EosClient(String host,int port,String accessKey,String secretKey)
      - Initiate constructed function.
      - + host: Subscription service host
        + port
        + accessKey
-       + accessSecret: Secret of the accessKey
+       + secretKey: Secret of the accessKey
      - EosClient instance
    * - getAlertService()
      - Get alert data subscription service instance.

@@ -9,18 +9,18 @@ EnOS System provides data subscription service to improve the API calling effici
 ## Creating a Subscription Job
 Take the following steps to create a data subscription job:
 
-1. Log in EnOS Console and select the **Data Subscription** module. On the **Data Subscription** page, click the **New Subscription** button to open the subscription configuration page. 
+1. Log in EnOS Console and select the **Data Subscription** module. On the **Data Subscription** page, click the **New Subscription** button to open the subscription configuration page.
 
    .. note:: An organization can have at most 5 data subscription jobs.
 
 2. Select the data subscription type, which determines the data source to be subscribed to. The subscription configuration for data sources is different. EnOS data subscription service supports the following data sources:
 
-   - **Real-time data**: Real-time telemetry of asset measure points uploaded to the cloud with time stamp.
+   - **Real-time data**: Real-time telemetry of asset measuring points uploaded to the cloud with time stamp.
    - **Alert data**: Alert data are generated according to specific alert rules defined for real-time data.
 
 3. In the **ID** field, enter an ID for the subscription job or click **Generate** to use the system-generated ID.
 
-4. From the **SA** drop down list, select the SA (service account) that is used for client and data authentication. Each subscription topic must has an associated SA. The system will detect the validity of the service account dynamically. When a service account is deleted, the data subscription configuration will be automatically disabled. 
+4. From the **SA** drop down list, select the SA (service account) that is used for client and data authentication. Each subscription topic must has an associated SA. The system will detect the validity of the service account dynamically. When a service account is deleted, the data subscription configuration will be automatically disabled.
 
 5. In the **Description** field, enter a short description for the subscription job.
 
@@ -30,12 +30,12 @@ Take the following steps to create a data subscription job:
 
 7. For the **Model Filter** and **Device Tags** sections, complete the data filtering configurations for real-time data subscription and alert data subscription separately:
 
-   - For **Real-time data** subscription: Filtering data by model and measure points (subscribing to data of specific measure points) and optionally by device tags (subscribing to data of specific devices).
+   - For **Real-time data** subscription: Filtering data by model and measuring points (subscribing to data of specific measuring points) and optionally by device tags (subscribing to data of specific devices).
    - For **Alert data** subscription: Filtering data by models (subscribing to alert data of specific model) and optionally by device tags (subscribing to data of specific devices).
 
 8. Click **Save** to save the data subscription configuration.
 
-.. note:: When a subscribed data source (model or measure point) is deleted, the system will keep the data subscription configuration, but an error message will be displayed, reporting that the configured data source is an unknown object.
+.. note:: When a subscribed data source (model or measuring point) is deleted, the system will keep the data subscription configuration, but an error message will be displayed, reporting that the configured data source is an unknown object.
 
 
 

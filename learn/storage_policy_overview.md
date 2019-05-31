@@ -23,5 +23,5 @@ With the Storage Policy service, EnOS provides a variety of data storage options
 ## Usage Limit
 
 - Currently, each organization can have 2 storage policy groups.
-- When storage policy is defined for a measure point, the point type and data type of the measure point cannot be changed. Otherwise, the stored data of the measure point cannot be retrieved by Open APIs.
+- When storage policy is defined for a measuring point, the point type and data type of the measuring point cannot be changed. Otherwise, the stored data of the measuring point cannot be retrieved by Open APIs.
 - The *getAssetsRawDataByTimeRange* API cannot be used to retrieve data of the AI Normalized Data storage type.

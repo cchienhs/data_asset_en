@@ -22,8 +22,8 @@ For detailed information about creating data subscription jobs, see [Developing 
 
 ## Advantages
 
-- Decoupling data production and data consumption. 
-- Rich set of data filtering conditions (organization, model, measure point, and asset).
+- Decoupling data production and data consumption.
+- Rich set of data filtering conditions (organization, model, measuring point, and asset).
 - Cross-organization data subscription (through service account).
 - Supporting "at-least-once" message delivery semantics.
 - "Pulling subscribed data" consumption model, supporting traffic control of the consumer.

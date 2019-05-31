@@ -2,7 +2,7 @@
 
 AI (analogy input)  data consists of physical parameters like temperature, pressure, flow, etc. The values of these parameters are collected by various sensors, converted to electric signals by a transmitter, and transferred to the analogy input of the controller.
 
-EnOS Streaming Processing Engine provides a unified AI data aggregation template to process the AI type data ingested from a measure point and assign the processed data to another measure point defined for the same device, thus enabling developers to process real-time AI data easily and quickly.  
+EnOS Streaming Processing Engine provides a unified AI data aggregation template to process the AI type data ingested from a measuring point and assign the processed data to another measuring point defined for the same device, thus enabling developers to process real-time AI data easily and quickly.  
 
 ## Features
 
@@ -24,11 +24,11 @@ EnOS integrates asset templates to normalize all asset input data, so the stream
 
 + **Input point**: The model point that provides input data to be processed.
 
-  > AI data aggregation template can process measure point data of AI type only.
+  > AI data aggregation template can process measuring point data of AI type only.
 
 + **Output point**: After the input data is processed, the processed result is transferred to the output point, and an output record is generated. The timestamp of the output record is the start time of the time window.
 
-  > 1. The output point must be a measure point of AI type.
+  > 1. The output point must be a measuring point of AI type.
   > 2. Ensure that the input point and output point belong to the same model.
   > 3. Avoid designing loop streams in the stream, like a -> b -> c -> a.
 
