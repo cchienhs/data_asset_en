@@ -43,7 +43,7 @@ For the scheduled starting time and archived data time range for each archiving 
 ### Data Configuration
 
 1. Select the **Channel** of data to be archived, where only **Real-time Message Channel** is supported currently.
-2. Select the **Model** to which the data to be archived belong. Only one data archiving policy can be configured for a model.
+2. Select the **Model** to which the data to be archived belong.
 
 After completing the above configuration, click **OK** to submit the data archiving policy. The policy will take effect immediately once it is submitted. If the current data archiving job is not completed in the current archiving cycle, it will restart per the newly-submitted policy.
 
