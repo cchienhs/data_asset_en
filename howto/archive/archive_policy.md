@@ -2,6 +2,8 @@
 
 Business data of huge size and with lower access frequency can be archived. EnOS Data Archiving service supports archiving data by specified cycles and synchronizing the archived data to target database and in specified directories, thus achieving data backup.
 
+## Features
+
 Features of the data archiving service are as follows:
 
 **Archiving specified data**
@@ -19,3 +21,19 @@ You set customized data archiving cycles (1 hour ~ 24 hours) based on the data a
 **Setting storage system and path**
 
 The archived files will be synchronized to the target storage system and stored in the configured path, thus achieving data backup.
+
+## Usage Limit
+
+When using the data archiving service, the following usage limit should be noted:
+
+**Number of supported archiving policies**
+
+At most 2 data archiving policies can be created for an organization.
+
+**Start time of data archiving**
+
+When data archiving policy is submitted, the system starts reading data from the specified message channel. However, in the first archiving cycle when the archiving policy is submitted, data will not be cached, so no archived file will be generated. Data will be archived from the next archiving cycle after the policy is submitted. If a policy is updated to add models, data of the new models will also be archived starting from the next archiving cycle after the updated policy is submitted.
+
+**Data retention in case of job failure**
+
+The data retention time of the current message channel is 3 days by default. In case of job failure, data archiving jobs must be troubleshooted and restarted in time to avoid data loss. 

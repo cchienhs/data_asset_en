@@ -29,7 +29,7 @@ If required by business needs, you can edit and update any submitted data archiv
 3. Update the data archiving configuration as per business needs.
 4. Click **OK** to submit the updated configuration.
 
-The updated data archiving policy will take effect immediately once it is submitted. Any data archiving job that is not completed in the current archiving cycle will automatically run again as per the newly-submitted policy. If all the data archiving jobs in the current archiving cycle have been completed, the updated data archiving policy will take effect in the next archiving cycle.
+The updated data archiving policy will take effect immediately once it is submitted. Any data archiving job that is not completed in the current archiving cycle will automatically run again as per the newly-submitted policy. If all the data archiving jobs in the current archiving cycle have been completed, the updated data archiving policy will take effect in the next archiving cycle. Data of the newly added models will also be archived starting from the next archiving cycle after the updated policy is submitted.
 
 ## Deleting Policy
 
