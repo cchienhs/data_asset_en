@@ -20,7 +20,7 @@ For each TSDB storage type, you can invoke a data service API to get the stored 
 
 EnOS provides an API SDK to help you calling the EnOS service APIs and developing applications offline. To install the EnOS API SDK for Java, you can get the Maven dependency information of the SDK and add it to your development project. Detailed steps are as follows:
 
-1. Open the Maven repository of the SDK at https://mvnrepository.com/artifact/com.envisioniot/enos-api/2.3.5.
+1. Open the Maven repository of the SDK at https://mvnrepository.com/artifact/com.envisioniot/enos-api/2.3.6.
 
 2. Open your development environment, add the maven dependency for the SDK in your Java project. See the following example.
 
