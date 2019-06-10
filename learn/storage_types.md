@@ -14,4 +14,4 @@ For detailed information about TSDB storage, see [Configuring TSDB Storage](../c
 
 Data Archiving storage is suitable for storing business data of huge size and lower access frequency. The archived files will be synchronized to target database and stored in the specified file path, thus achieving data backup.
 
-For detailed information about data archiving storage, see [Configuring Archive Storage](../howto/archive/configuring_archive_storage).
+For detailed information about data archiving storage, see [Configuring Data Archiving Policy](../howto/archive/configuring_archive_storage).

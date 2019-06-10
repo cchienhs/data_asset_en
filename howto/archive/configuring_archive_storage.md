@@ -12,7 +12,7 @@ For archiving and storing data, you need to create data archiving policies for d
 
 Complete the following basic information of the data archiving policy:
 
-1. Input the **Name** of the policy, where Chinese characters, upper cases and lower cases, numbers, underline (_) are supported, with a length limited of 50 characters.
+1. Input the **Name** of the policy, where Chinese characters, upper cases and lower cases, numbers, underline are supported, with a length limited of 50 characters.
 2. Input the **Description** of policy, with a length limit of 100 characters.
 
 ### Storage Configuration
@@ -21,8 +21,8 @@ Input the detailed configuration of the data storage, including configuring stor
 
 1. Select **Resource Type** and specify the target storage system for synchronizing the archived files (only Blob is supported currently).
 2. From the **Storage Resource** drop-down list, select the data source that has been registered through [Data Connection](/docs/offline-data/en/latest/data_source/index.html).
-3. Input the **Storage Path** where the archive data are located in the storage system and select the time partition format for the storage path root directory. The path must start and end with "/". For detailed information about time partition formats, see [Storage Path Partition Parameters](../../reference/archive_storage#path).
-4. Select whether to generate the path by event time or by system time. For detailed description about how to generate directory by different time, see [Data Archiving Logic](../../reference/archive_storage#logic).
+3. Input the **Storage Path** where the archive data are located in the storage system and select the time partition format for the storage path root directory. The path must start and end with "/". For detailed information about time partition formats, see [Storage Path Partition Parameters](/docs/data-asset/en/latest/reference/archive_storage#path).
+4. Select whether to generate the path by event time or by system time. For detailed description about how to generate directory by different time, see [Data Archiving Logic](/docs/data-asset/en/latest/reference/archive_storage#logic).
 5. Input the **File Name** of the archived file, where upper cases, lower cases, numbers, underline are supported, with a length limit of 50 characters. Once a file is generated, the system will add the time stamp suffix "_UTC" to the file name automatically.
 6. Select **File Type**, where only TEXTFILE format (.csv) is supported currently.
 7. Select the **Encoding** for archived file, where the default format is UTF-8.
@@ -49,7 +49,7 @@ After completing the above configuration, click **OK** to submit the data archiv
 
 When data archiving policy is submitted, the system starts reading data from the specified message channel. However, in the first archiving cycle when the archiving policy is submitted, data will not be cached, so no archived file will be generated. Data will be archived from the next archiving cycle after the policy is submitted. If a policy is updated to add models, data of the new models will also be archived starting from the next archiving cycle after the updated policy is submitted.
 
-For more information about how archived files are generated, see [Generation of Archived Files](../../reference/archive_storage#file)。
+For more information about how archived files are generated, see [Generation of Archived Files](/docs/data-asset/en/latest/reference/archive_storage#file)。
 
 .. note:: Once a data archiving policy is running, it cannot be stopped manually. To stop archiving data, you can delete the corresponding data archiving policy. Archived files will not be affected when the policy is deleted.
 
