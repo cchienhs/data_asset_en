@@ -28,6 +28,13 @@
    quickstart/gettingstarted_subscribe_alerts
 
 .. toctree::
+   :maxdepth: 1
+   :caption: Tutorial
+
+   tutorial/subscribing_to_device_data/index
+   tutorial/getting_tsdb_data/index
+
+.. toctree::
    :maxdepth: 2
    :caption: How-to's
 
