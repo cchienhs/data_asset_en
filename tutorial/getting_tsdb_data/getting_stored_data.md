@@ -236,6 +236,6 @@ The reference documentation for each API can be found through **EnOS API** > **A
 
 .. image:: media/api_doc.png
 
-For more information about how to use EnOS API, see [Getting Started with EnOS REST APIs](https://www.envisioniot.com/docs/app-development/en/latest/gettingstarted_api.html).
+For more information about how to use EnOS API, see [Getting Started with EnOS APIs](/docs/api/en/latest/gettingstarted.html).
 
 <!--end-->

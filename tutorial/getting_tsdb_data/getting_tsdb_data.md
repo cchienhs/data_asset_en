@@ -28,23 +28,23 @@ You understand how real-time data flows through the engines, the storage, and th
 
 This tutorial includes the following units:
 
-> [Modelling the Device](modelling_device)
+> [Unit 1. Modelling the Device](modelling_device)
 >
 > 10 minutes
 
-> [Configuring Storage Policy for the Device Data](configuring_storage_policy)
+> [Unit 2. Configuring Storage Policy for the Device Data](configuring_storage_policy)
 >
 > 10 minutes
 
-> [Registering and Connecting Device into EnOS](connecting_device)
+> [Unit 3. Registering and Connecting Device into EnOS](connecting_device)
 >
 > 20 minutes
 
-> [Developing Stream Data Processing Jobs](developing_streams)
+> [Unit 4. Developing Stream Data Processing Jobs](developing_streams)
 >
 > 20 minutes
 
-> [Getting Stored Data with EnOS APIs](getting_stored_data)
+> [Unit 5. Getting Stored Data with EnOS APIs](getting_stored_data)
 >
 > 30 minutes
 

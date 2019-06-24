@@ -18,11 +18,11 @@ See the following example:
 
 ## Configuring data processing jobs
 
-EnOS Stream Analytics provides several templates for processing stream data. In this tutorial, configure 2 data processing jobs using the *Window Aggregation for AI* and *Multi-Point Aggregation* templates.
+EnOS Stream Analytics provides several templates for processing stream data. In this tutorial, configure 2 data processing jobs using the *Window Aggregation* and *Multi-Point Aggregation* templates.
 
 ### Job for getting the max/min values of a measuring point
 
-In this step, use the *Window Aggregation for AI* template to create a data processing job for processing the data of the *Reading* measuring point and assigning the processed data to another measuring point.
+In this step, use the *Window Aggregation* template to create a data processing job for processing the data of the *Reading* measuring point and assigning the processed data to another measuring point.
 
 Complete the following configuration for the stream data processing job:
 
@@ -41,7 +41,7 @@ See the following example:
 
 .. image:: media/stream_config_1.png
 
-For more information about the *Window Aggregation for AI* template, see [AI Data Aggregation Template](https://www.envisioniot.com/docs/data-asset/en/latest/learn/ai_template_overview.html).
+For more information about the *Window Aggregation Template*, see [Window Aggregation Template](https://www.envisioniot.com/docs/data-asset/en/latest/learn/ai_template_overview.html).
 
 ### Job for getting the difference between measuring points
 

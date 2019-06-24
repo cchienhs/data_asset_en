@@ -70,7 +70,7 @@ See the following example of the created data subscription.
 
 .. image:: media/subscription_config_2.png
 
-For detailed information about configuring subscriptions for alert record, see [Subscribing to alert record](https://www.envisioniot.com/docs/data-asset/en/latest/quickstart/gettingstarted_subscribe_alerts.html).
+For detailed information about configuring subscriptions for alert record, see [Subscribing to Alert Data](https://www.envisioniot.com/docs/data-asset/en/latest/quickstart/gettingstarted_subscribe_alerts.html).
 
 ## Enabling the subscriptions
 

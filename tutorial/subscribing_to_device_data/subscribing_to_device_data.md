@@ -25,18 +25,18 @@ You have completed the *Connecting Devices into EnOS Using SDK* tutorial to unde
 
 This tutorial includes the following units:
 
-> [Registering and Connecting the Device to EnOS](registering_device)
+> [Unit 1. Registering and Connecting the Device to EnOS](registering_device)
 >
 > 10 minutes
 
-> [Simulating Device Data and Configuring Alert Settings](setting_alerts)
+> [Unit 2. Simulating Device Data and Configuring Alert Settings](setting_alerts)
 >
 > 20 minutes
 
-> [Configuring Data Subscription](configuring_subscription)
+> [Unit 3. Configuring Data Subscription](configuring_subscription)
 >
 > 10 minutes
 
-> [Getting the Subscribed Data](getting_subscribed_data)
+> [Unit 4. Getting the Subscribed Data](getting_subscribed_data)
 >
 > 30 minutes
