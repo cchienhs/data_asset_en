@@ -1,7 +1,7 @@
 # Managing Data Quality
 Note: This article is in the progress of translation. Thanks for your visit!
 
-通过对数据标记质量信息，你可以查询数据的质量报告。数据质量报告提供完备性、准确性、及时性三个维度的质量信息查询，帮助你速了解资产的数据质量情况。
+通过对数据标记质量信息，你可以查询数据的质量报告。数据质量报告提供完备性、准确性、及时性三个维度的质量信息查询，帮助你快速了解资产的数据质量情况。
 
 ## 前提条件
 查询数据质量报告的前提条件如下：

@@ -12,7 +12,7 @@ When assets are connected into the EnOS cloud, the asset raw data is ingested th
 
 3. The data processing logics of the Streaming Engine include 2 parts:
 
-   - User-defined logic: you can design real-time data processing streams through the **Stream Development** function in the EnOS Console. 
+   - User-defined logic: you can design real-time data processing streams through the **Stream Development** function in the EnOS Console.
 
      For more information about designing data processing jobs, see [Developing a Stream Processing Job](/docs/data-asset/en/latest/howto/stream/index.html).  
 
@@ -28,9 +28,9 @@ Data in the Origin Data Topic and the Cal Data Topic are written to **In-memory 
 
 - IMDB: stores only the latest data for fast query.
 
-- TSDB: stores time series data of specified time range based on the storage policies that you define in the EnOS Console. The stored data can be retrieved through APIs: `getAssetsRawDataByTimeRange`, `getAssetsAIRawData`, `getAssetsAINormalizedData`, `getAssetsStatusData`, `getAssetsCurrentDayElectricPower,` `getAssetsElectricPowerData`, and `getAssetsGenericData`. 
+- TSDB: stores time series data of specified time range based on the storage policies that you define in the EnOS Console. The stored data can be retrieved through data service APIs.
 
-- Archive: archives asset data based on the data archiving policy that you define in the EnOS Console. 
+- Archive: archives asset data based on the data archiving policy that you define in the EnOS Console.
 
    For more information about the types of data storage, see [Storage Types](storage_types).
 

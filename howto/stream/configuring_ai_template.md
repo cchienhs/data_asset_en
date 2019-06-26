@@ -1,6 +1,6 @@
-# Configuring a Window Data Aggregation Job
+# Configuring a Time Window Data Aggregation Job
 
-Use the **Window Aggregation** template to quickly create a stream processing job for aggregating numeric type data of a single measuring point and assigning the processed data to another measuring point on the same device.
+Use the **Time Window Aggregation** template to quickly create a stream processing job for aggregating numeric type data of a single measuring point and assigning the processed data to another measuring point on the same device.
 
 ## Setting Window Strategy
 

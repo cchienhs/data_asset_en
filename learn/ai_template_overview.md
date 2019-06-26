@@ -1,8 +1,8 @@
-# Window Aggregation Template
+# Time Window Aggregation Template
 
 The value of physical parameters of devices, such as temperature, pressure, flow, etc, can be collected by various sensors, converted to electric signals by a transmitter, and transferred to the input of the controller.
 
-EnOS streaming processing engine provides a unified window aggregation template to process numeric type data that is ingested from a measuring point, and then assigns the processed data to another measuring point defined for the same device. Data developers can use this template to design stream data processing jobs to aggregate real-time device data easily and quickly.  
+EnOS streaming processing engine provides a unified Time window aggregation template to process numeric type data that is ingested from a measuring point, and then assigns the processed data to another measuring point defined for the same device. Data developers can use this template to design stream data processing jobs to aggregate real-time device data easily and quickly.  
 
 ## Features
 
@@ -24,8 +24,8 @@ Supporting various threshold ranges to filter invalid data. Input data that exce
 
 ## Configuring Data Aggregation Jobs
 
-Take the following steps to use the Window Aggregation template to quickly create a stream processing job:
+Take the following steps to use the Time Window Aggregation template to quickly create a stream processing job:
 
-1. When initializing the stream processing job, select the **Window Aggregation** template. For detailed information, see [Creating a Stream Processing Job](../howto/stream/creating_job).
+1. When initializing the stream processing job, select the **Time Window Aggregation** template. For detailed information, see [Creating a Stream Processing Job](../howto/stream/creating_job).
 
-2. Configure the data processing policy. For detailed information, see [Configuring Window Data Aggregation Job](../howto/stream/configuring_ai_template).
+2. Configure the data processing policy. For detailed information, see [Configuring a Time Window Data Aggregation Job](../howto/stream/configuring_ai_template).

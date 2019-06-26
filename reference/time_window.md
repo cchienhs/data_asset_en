@@ -1,6 +1,6 @@
 # Time Window
 
-When using the Window Aggregation template to develop stream processing jobs, you need to configure the window strategy. Detailed introduction to the time window is as follows:
+When using the Time Window Aggregation template to develop stream processing jobs, you need to configure the window strategy. Detailed introduction to the time window is as follows:
 
 ## Event time
 

@@ -9,8 +9,8 @@ EnOS Streaming System supports creating a data processing jobs and importing the
 
 1. Log in EnOS Console and click **Stream Data Processing** > **Stream Development**.
 2. Click the **+** icon above the stream processing job list to open the **New Stream** window. Enter the name and description of the stream processing job and select a template:
-   - Window Aggregation for AI: For getting the maximum and minimum values of the meter reading data in 10 minutes.
-   - Multi-Point Aggregation: For getting the difference between the maximum and minimum values of the reading data in 10 minutes.
+   - Time Window Aggregation: For getting the maximum and minimum values of the meter reading data in 10 minutes.
+   - Multi-Point Merging: For getting the difference between the maximum and minimum values of the reading data in 10 minutes.
 
 See the following example:
 
@@ -18,11 +18,11 @@ See the following example:
 
 ## Configuring data processing jobs
 
-EnOS Stream Analytics provides several templates for processing stream data. In this tutorial, configure 2 data processing jobs using the *Window Aggregation* and *Multi-Point Aggregation* templates.
+EnOS Stream Analytics provides several templates for processing stream data. In this tutorial, configure 2 data processing jobs using the *Time Window Aggregation* and *Multi-Point Merging* templates.
 
 ### Job for getting the max/min values of a measuring point
 
-In this step, use the *Window Aggregation* template to create a data processing job for processing the data of the *Reading* measuring point and assigning the processed data to another measuring point.
+In this step, use the *Time Window Aggregation* template to create a data processing job for processing the data of the *Reading* measuring point and assigning the processed data to another measuring point.
 
 Complete the following configuration for the stream data processing job:
 
@@ -41,11 +41,11 @@ See the following example:
 
 .. image:: media/stream_config_1.png
 
-For more information about the *Window Aggregation Template*, see [Window Aggregation Template](https://www.envisioniot.com/docs/data-asset/en/latest/learn/ai_template_overview.html).
+For more information about the *Time Window Aggregation* template, see [Time Window Aggregation Template](https://www.envisioniot.com/docs/data-asset/en/latest/learn/ai_template_overview.html).
 
 ### Job for getting the difference between measuring points
 
-In this step, use the *Multi-Point Aggregation* template to create a data processing job for getting the difference between 2 measuring points and assigning the processed data to another measuring point.
+In this step, use the *Multi-Point Merging* template to create a data processing job for getting the difference between 2 measuring points and assigning the processed data to another measuring point.
 
 Complete the following configuration for the stream data processing job:
 
@@ -60,7 +60,7 @@ See the following example:
 
 .. image:: media/stream_config_2.png
 
-For more information about the *Multi-Point Aggregation* template, see [Multi-Point Aggregation Template](https://www.envisioniot.com/docs/data-asset/en/latest/learn/multi_point_overview.html).
+For more information about the *Multi-Point Merging* template, see [Multi-Point Merging Template](https://www.envisioniot.com/docs/data-asset/en/latest/learn/multi_point_overview.html).
 
 ## Starting data processing jobs
 

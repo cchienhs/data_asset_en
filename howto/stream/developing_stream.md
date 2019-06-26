@@ -35,8 +35,8 @@ You can quickly create a stream processing job with the templates provided by En
 
 EnOS Stream Processing System provides the following templates for configuring stream data processing policies quickly:
 
-- Window Aggregation for AI template: Supporting aggregation of AI type data of a single measuring point and assigning the processed data to another measuring point on the same device. For details, see [AI Data Aggregation Template](../learn/ai_template_overview).  
-- Multi-Point Aggregation template: Supporting aggregation of multiple measuring points of a device and assigning the processed data to another measuring point on the same device, by writing customized calculation expressions. For details, see [Multi-Point Merge Template](../learn/multi_point_overview).
+- Time Window Aggregation template: Supporting aggregation of AI type data of a single measuring point and assigning the processed data to another measuring point on the same device. For details, see [Time Window Aggregation Template](../learn/ai_template_overview).  
+- Multi-Point Merging template: Supporting aggregation of multiple measuring points of a device and assigning the processed data to another measuring point on the same device, by writing customized calculation expressions. For details, see [Multi-Point Merging Template](../learn/multi_point_overview).
 - Electric Power Calculation template: Supporting calculating electric power data uploaded from electric meters with specific calculation method and assigning the total electric power data or detailed data in a time interval to measuring points in the same model. For details, see [Electric Power Calculation Template](../learn/pi_template_overview).
 
 ## Saving and Publishing the Stream Processing Job

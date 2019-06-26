@@ -9,7 +9,7 @@ This guide intends to help you learn how to process data of multiple measuring p
 
 ## Procedure
 
-The procedure of processing data with the Multi-Point Aggregation template is as follows:
+The procedure of processing data with the Multi-Point Merging template is as follows:
 
 1. Design and create multiple point data processing job
 
@@ -41,11 +41,11 @@ The goal of this guide is to get the sum of the raw data ingesting points *testA
 
 - Data ingestion: For information about data ingestion of input points *testA_raw* and *testB_raw*, see [Device Connection](https://www.envisioniot.com/docs/device-connection/en/latest/quickstart/gettingstarted_device_connection.html).
 
-## Step 1. Develop Multi-Point Data Processing Job
+## Step 1. Develop a Multi-Point Data Processing Job
 
 1. Log in EnOS Console and click **Stream Data Processing** > **Stream Development** to view all the data processing jobs created within the organization. You can double-click a job to view and edit its configuration.
 
-2. Click the **+** icon above the job list to create a job. Enter the name and description of the job and select *Multi-Point Merge* as the template. Optionally, you can choose to import the configuration file of an existing job to complete the configuration quickly.
+2. Click the **+** icon above the job list to create a job. Enter the name and description of the job and select *Multi-Point Merging* as the template. Optionally, you can choose to import the configuration file of an existing job to complete the configuration quickly.
 
 3. **Triggering Mode**: Select "point" as the triggering mode, and select "LastValue" as the timing interpolation strategy.
 

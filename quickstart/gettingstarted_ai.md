@@ -1,6 +1,6 @@
 # Aggregating AI Data
 
-This guide intends to help you learn how to process AI type stream data with the Window Aggregation template.
+This guide intends to help you learn how to process AI type stream data with the Time Window Aggregation template.
 
 ## Prerequisites
 
@@ -9,7 +9,7 @@ This guide intends to help you learn how to process AI type stream data with the
 
 ## Procedure
 
-The procedure of processing data with the Window Aggregation template is as follows:
+The procedure of processing data with the Time Window Aggregation template is as follows:
 
 1. Design and create a stream processing job
 
@@ -42,11 +42,11 @@ The goal of this guide is to get the maximum value of the *test_raw* input point
    - Data ingestion: For information about data ingestion of input point *test_raw*, see `Device Connection <https://www.envisioniot.com/docs/device-connection/en/latest/quickstart/gettingstarted_device_connection.html>`__ .
 
 
-## Step 1. Develop Data Processing Job
+## Step 1. Develop a Data Processing Job
 
 1. Log in EnOS Console and click **Stream Data Processing** > **Stream Development** to view all the streams created within the organization. You can double-click a job to view and edit its configuration.
 
-2. Click the **+** icon above the job list to create a stream processing job. Enter the name and description of the job and select *Window Aggregation* as the template. Optionally, you can choose to import the configuration file of an existing job to complete the configuration quickly.
+2. Click the **+** icon above the job list to create a stream processing job. Enter the name and description of the job and select *Time Window Aggregation* as the template. Optionally, you can choose to import the configuration file of an existing job to complete the configuration quickly.
 
 3. Configure the window strategy of the stream processing job:
 

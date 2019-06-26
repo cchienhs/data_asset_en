@@ -1,4 +1,4 @@
-# Multi-Point Aggregation Expression Syntax
+# Multi-Point Merging Expression Syntax
 
 The supported syntax for the processing logic expressions is described in the following table:
 
@@ -27,7 +27,7 @@ The supported syntax for the processing logic expressions is described in the fo
      - Logical operators
      -
 
-.. note:: Multi-Point Merge expressions support Scala syntax, but do not support loop statements like for and while.
+.. note:: Multi-Point Merging expressions support Scala syntax, but do not support loop statements like for and while.
 
 ## Variable Autocomplete Feature
 
