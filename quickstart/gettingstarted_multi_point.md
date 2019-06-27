@@ -79,7 +79,7 @@ On the **Stream Operation** page, find the running job in the table, and click t
 
 - **Log**: Click the **View Logs** icon on the upper right corner to check the running log of the job.
 
-- **Results**: Call the `getAssetsRawDataByTimeRange` API to get the data of point *testC*. For more information, see [Getting Stored Data with EnOS APIs](../howto/obtain/getting_stored_data.html).
+- **Results**: Call the *Get Asset Raw Data by Time Range* API to get the data of point *testC*. For more information about data service API, go to **EnOS Console > EnOS API**.
 
 .. |start_icon| image:: ../media/start_icon.png
 

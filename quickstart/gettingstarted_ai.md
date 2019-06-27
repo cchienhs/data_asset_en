@@ -80,7 +80,7 @@ On the **Stream Operation** page, find the running stream processing job in the 
 
 - **Summary**: View the summary of the running job, such as the overall data processing records and the data aggregation records in a specific period.
 - **Log**: Click the **View Logs** icon on the upper right corner to check the running log of the job.
-- **Results**: The processed data will be stored in TSDB according to the configured storage policy. Call the corresponding API to get the stored data. For more information, see [Getting Stored Data with EnOS APIs](../howto/obtain/getting_stored_data.html).
+- **Results**: The processed data will be stored in TSDB according to the configured storage policy. Call the corresponding API to get the stored data. For more information about data service API, go to **EnOS Console > EnOS API**.
 
 .. |start_icon| image:: ../media/start_icon.png
 

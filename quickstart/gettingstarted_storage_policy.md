@@ -46,4 +46,4 @@ Click **OK** to save the storage policy configuration. The system will store the
 
 ### Step 3. Retrieve stored data with API
 
-Use the `getAssetsAINormalizedData` API to retrieve the stored normalized data of the measuring point. For sample code of calling data service APIs, see [Getting Stored Data with EnOS APIs](../howto/obtain/getting_stored_data.html).
+Use the *Get Asset AI Data with Aggregation Logic* API to retrieve the stored normalized data of the measuring point. For sample code of calling data service APIs, go to **EnOS Console > EnOS API**.
