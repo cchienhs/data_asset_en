@@ -17,9 +17,13 @@ The basic information of the measuring point metadata includes:
 - Name
 - Point type
 
+.. image:: ../../media/metadata_basic_info.png
+
 ### Stream Processing Lineage
 
 Click the **Stream Processing Lineage** tab to view the stream data processing relationship associated with the measuring point. Click on any node to view the metadata information of the node.
+
+.. image:: ../../media/metadata_stream_lineage.png
 
 ### Storage Policies
 
