@@ -1,30 +1,28 @@
 # Data Quality
-Note: This article is in the progress of translation. Thanks for your visit!
+Data has become a new type of important asset that Internet enterprises rely on. Data quality is directly related to the accuracy of information and also the survival and competitiveness of an enterprise.
 
-数据已经成为互联网企业非常依赖的新型重要资产。数据的质量直接关系到信息的精准度，也影响到企业的生存和竞争力。
+Data quality management refers to a set of processing guidelines for measuring, improving, and verifying data quality as well as integrating organizational data. The IoT data is featured by large volume, high speed, and diversity so that the data processing required to ensure the quality of IoT big data is different from the quality management ways as stated in the traditional data management plans.
 
-数据质量管理是测度、提高和验证质量，以及整合组织数据的一套处理准则。而物联网数据体量大、速度快和多样性的特点，决定了物联网大数据质量所需的处理，有别于传统数据治理计划的质量管理方式。
+## Data Quality Assessment Dimensions
+Currently, EnOS supports the following data quality assessment dimensions:
+- Completeness
 
-## 数据质量评估维度
-目前EnOS支持的数据质量评估维度如下：
-- 完备性（Completeness）
+  Data is complete and dose not miss any information. For example, the personnel information data should completely cover gender, age, and the measuring point data of the day should be fully uploaded.
 
-  数据是完整不缺失的，例如人员信息完整涵盖性别、年龄，当日测点数据完全到达等。
+- Accuracy
 
-- 准确性（Accuracy）
+  Data is accurate and reasonable. For example, the personnel age information should be within a reasonable range.
 
-  数据是准确合理的，例如年龄在合理范围内。
+- Timeliness
 
-- 及时性（Timeliness）
+  Data is uploaded to the cloud in time with no latency.
 
-  数据的上送是否及时，是否有延迟。
+For a detailed description of the data quality dimensions and a review of the data quality report, see [Managing Data Quality](../howto/quality/managing_data_quality).
 
-对数据质量维度的详细介绍以及查看数据质量报告，请参考[数据质量管理](../howto/quality/managing_data_quality)。
+## Product Advantages
 
-## 产品优势
+- Multi-dimensional data quality assessment
+- Visualized data quality report query
 
-- 多维度数据质量评估
-- 可视化质量报表查询
-
-## 使用限制
-- 数据质量规则是通过在流数据处理任务中配置相关Stage来设置的。更多详细信息，请参考[查询数据质量报告](../quickstart/gettingstarted_quality_report)。
+## Usage Limit
+- Data quality rules are set by configuring relevant stages in stream data processing jobs. For more information, see [Querying Data Quality Report](../quickstart/gettingstarted_quality_report).

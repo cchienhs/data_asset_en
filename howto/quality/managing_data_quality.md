@@ -1,67 +1,65 @@
 # Managing Data Quality
-Note: This article is in the progress of translation. Thanks for your visit!
+By marking data with quality information tags, you can query the quality report of the data. The data quality reports provide data quality information in 3 dimensions: completeness, accuracy, and timeliness, helping you quickly understand the data quality of your assets.
 
-通过对数据标记质量信息，你可以查询数据的质量报告。数据质量报告提供完备性、准确性、及时性三个维度的质量信息查询，帮助你快速了解资产的数据质量情况。
+## Prerequisites
+The prerequisites for querying data quality reports are as follows:
+- TSDB storage policies have been configured for device measuring point data.
+- The device measuring point data has been marked by quality tags with the Streamsets quality rule Stages.
 
-## 前提条件
-查询数据质量报告的前提条件如下：
-- 设备测点数据已配置TSDB存储策略
-- 设备测点已使用Streamsets质量规则Stage对数据进行了质量标记
-
-## 设置质量报告查询条件
-进入EnOS控制后，从左侧导航栏中选择 **数据质量**，输入以下查询条件后，点击 **查询** 按钮：
+## Setting Query Conditions for Quality Report 
+After logging in the EnOS Console, select **Data Quality** from the left navigation panel, enter the following query conditions, and click the **Query** button:
 
 .. image:: ../../media/data_quality_filter.png
 
-- 模型：选择待查询的模型。支持选择当前组织下所有私有模型和公有模型。
-- 测点：选择模型下待查询的测点。目前支持单测点按天统计的质量报告查询。
-- 资产：选择单个或多个资产。支持批量查询同模型下多个资产的质量报告。
-- 时间：选择或自定义查询某个时间段内（天数）的数据质量报告。为防止查询数据量过大，目前查询限制为：资产数量*天数≤600
+- **Model**: Select the model to be queried. Support for selecting all public and private models under the current organization.
+- **Measuring Point**: Select the measuring point to be queried under the selected model. Currently, it is supported to query the daily quality report for a single measuring point.
+- **Asset**: Select 1 or multiple assets. Support for querying quality reports of multiple assets under the same model.
+- **Time**: Select or customize a certain period of time (days) to query the quality report. To avoid large amount of queried data, the current query limit is: number of assets * days ≤ 600.
 
-## 查看质量报告
+## Viewing Data Quality Report
 
-数据质量报告生成后，查看以下维度的数据质量详情：
+After the data quality report is generated, you can view the data quality details from the following dimensions:
 
-**质量维度**
+### Quality dimensions
 
-- 完备性 
+- Completeness 
 
-  查看按天统计的测点完备性数据。目前只统计每天到达的测点数（由存入TSDB的数据点数量确定）。
+  View the daily completeness data of the measuring point data. Currently, only the number of measuring points that upload data is counted (depending on the number of data points stored in TSDB).
 
   .. image:: ../../media/data_quality_completeness.png
 
-- 准确性 
+- Accuracy 
 
-  查看按天统计的测点数据准确率。准确率 = 实到准确点数 / 实到总点数
+  View the daily accuracy rate of measuring point data. Accuracy rate = Accurate points / Total points.
 
-  > 准确性是通过判断测点value是否超出其阈值区间来进行判断的。当value超出阈值上限，则打上越上限标签；当value超出阈值下限，则打上越下限标签。越上限和越下限都是数据不准确的表现。
+  > Accuracy of data is determined by judging whether the measuring point value exceeds the specified threshold range. If the value exceeds the upper limit, the data will be marked over-upper-limit tag; if the value exceeds the lower limit, the data will be marked over-lower-limit tag. Data marked by tags will be deemed as inaccurate.
   >
   > .. image:: ../../media/data_quality_accuracy.png
 
-- 及时性 
+- Timeliness 
 
-  查看按天统计的测点数据及时率。及时率 = 实到及时点数 / 实到总点数
+  View the daily timeliness rate of measuring point data. Timeliness rate = Timely points / Total points.
 
-  > 及时性是通过对比每一条上送数据的时间戳与测点latest数据的时间戳来判断的。如果比latest数据的时间戳晚，则打上迟到标签；如果比latest数据的时间戳早，则不打迟到标签，同时latest数据更新为当前数据。
+  > Timeliness of data is determined by comparing the time stamp of each uploaded data point with the time stamp of the latest data of the measuring point. If the time stamp of the uploaded data is later than the time stamp of the latest data, the data will be marked as late; if it is earlier than the time stamp of the latest data, the uploaded data will not be marked as late, and the time stamp of the latest data is replaced with that of the current data.
   >
   > .. image:: ../../media/data_quality_timeliness.png
 
-**质量异常颜色标记**
+### Color marking for abnormal quality
 
-数据质量报告对不同等级的数据质量进行颜色标注，方便对异常数据情况进行快速识别，具体如下：
+Different levels of data quality are marked with different colors in the data quality report to facilitate rapid identification of abnormal data:
 
-- 0 -20%：红色
-- 20 -50%：橘色
-- 50 - 80%：蓝色
-- ≥80%：透明色
+- 0 -20%: red
+- 20 -50%: orange
+- 50 - 80%: blue
+- ≥80%: transparent
 
-**记录点数 / 百分比切换**
+### Toggling between point count/percentage
 
-点击 **点数** 或 **准确度**，切换数据质量报告数据的查看方式。
+Click **Point Count** or **Percentage** to toggle how the data quality report data is presented.
 
-**质量报告下载**
+### Downloading quality report
 
-点击 **下载** 图标 |download_icon| ，可下载保存数据质量报告。
+Click the **Download** icon |download_icon| to download and save the data quality report.
 
 
 

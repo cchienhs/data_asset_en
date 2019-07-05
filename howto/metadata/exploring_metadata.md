@@ -1,37 +1,35 @@
 # Querying Metadata of Measuring Points
-Note: This article is in the progress of translation. Thanks for your visit!
+With the data asset explorer, you can query the metadata information of asset measuring points, including basic information, stream processing lineage, TSDB storage configuration, and instance list.
 
-通过数据资产检索，你可以查询资产模型测点的元数据信息，包括测点的基本信息、流式血缘信息、存储策略信息、和实例列表等。
-
-## 设置检索条件
-进入EnOS控制后，从左侧导航栏中选择 **数据资产检索**，在模型测点搜索框中，输入模型或者测点的关键词，查询模型和测点信息。查询返回结果以 {模型标识符}::{测点标识符} 格式展示。如下图所示：
+## Setting Query Conditions
+After logging in to EnOS Console, select **Data Asset Explorer** from the left navigation panel. In the **Model / Point** search box, enter keywords to search for models and measuring points. The search results are displayed in the format of {model identifier}::{point identifier}, as shown below:
 
 .. image:: ../../media/metadata_search_result.png
 
-## 查看检索结果
-在模型测点查询结果列表中，点击模型测点名，打开检索详情页，查看以下测点元数据信息：
+## Viewing Searched Metadata
+In the list of searched models and measuring points, click a record to open the details page, and view the following metadata information of the measuring point:
 
-**基础信息**
+### Basic Information
 
-测点元数据基础信息包括：
+The basic information of the measuring point metadata includes:
 
-- 标识符
-- 名称
-- 测点类型
+- Identifier
+- Name
+- Point type
 
-**流式血缘**
+### Stream Processing Lineage
 
-点击 **流式血缘** 标签，查看与测点相关的流数据处理关系。点击任意节点，查看节点的元数据信息。
+Click the **Stream Processing Lineage** tab to view the stream data processing relationship associated with the measuring point. Click on any node to view the metadata information of the node.
 
-**存储策略**
+### Storage Policies
 
-点击 **TSDB存储配置** 标签，查看测点的TSDB存储配置，包括存储策略所在分组、存储策略类型及存储时长。
+Click the **TSDB Storage Config** tab to view the TSDB storage configuration of the measuring point, including the storage policy group, storage type, and storage time for the point data.
 
 .. image:: ../../media/metadata_storage.png
 
-**实例列表**
+### Instance List
 
-点击 **实例列表** 标签，查看测点所属模型所关联的所有实例。在 **操作** 列中，点击 **数据质量** 或 **数据洞察**，查看对应实例当前测点的数据质量详情及数据详情。
+Click the **Instance List** tab to view all the instances associated with the model to which the measuring point belongs. In the **Operations** column, click **Data Quality** or **Data Insights** to view the data quality details and data details for the measuring point of the corresponding instance.
 
 .. image:: ../../media/metadata_devices.png
 

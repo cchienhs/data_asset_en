@@ -1,26 +1,24 @@
 # Data Asset Explorer
-Note: This article is in the progress of translation. Thanks for your visit!
+The metadata, also known as mediation data and relay data, is the data about data. Metadata is often used to describe objects such as information resources and data, and to provide structured data about the information related to certain resources. The scenarios of exploring asset metadata include identifying resources, evaluating resources, tracking changes of resources in its usage, managing a large volume of networked data efficiently, and achieving effective discovery, query, integration, and effective management of resources.
 
-元数据（metadata），又称中介数据、中继数据，是描述数据的数据（data about data）。元数据常用于描述信息资源或数据等对象，提供某种资源的有关信息的结构数据（structured data）。其使用目的在于：识别资源、评价资源、追踪资源在使用过程中的变化、实现简单高效地管理大量网络化数据、实现信息资源的有效发现、查找、一体化组织和对资源使用的有效管理。
+## Features
+Currently, the objects of the data asset exploring feature supported by EnOS are models and measuring points. Metadata of models and measuring point includes basic information, stream processing lineage, TSDB storage configuration, and instance list.
 
-## 产品功能
-目前EnOS支持数据资产检索的对象为模型测点。模型测点的元数据包括基础信息、流式血缘、TSDB存储配置、和实例列表。
+**Stream processing lineage**
 
-**流式血缘**
+The stream processing lineage analytics is used to fully track the data processing flow so as to find all relevant metadata objects that take a data object as the starting point, as well as the relationship between these metadata objects. The relationship between metadata objects refers specifically to the data stream input and output relationship.
 
-流式血缘分析用于对数据处理过程的全面追踪，从而找到某个数据对象为起点的所有相关元数据对象以及这些元数据对象之间的关系。元数据对象之间的关系特指表示这些元数据对象的数据流输入输出关系。
+In stream data processing jobs, data of measuring points can be calculated and configured. The metadata explorer supports querying the stream processing lineage of the target measuring point, by searching the input and output relationships between all relevant measuring points starting from the target measuring point. The specific functions are described as follows:
 
-在流数据处理任务中，可对模型测点进行运算配置，测点元数据检索支持查看目标测点的流式血缘关系，及查看以目标测点为起点的所有相关测点之间的输入输出关系。具体功能如下：
+- Visualizing the upstream/downstream lineage of measuring points in stream processing jobs
+- Viewing the metadata information of any node in the lineage relationship by clicking on a node
 
-- 展示测点在流数据处理任务中的上下游血缘关系
-- 点击血缘关系中的任意节点，可查看当前节点的元数据信息
+**TSDB storage configuration**
 
-**存储策略**
+TSDB storage policies must be configured for measuring points so that data of the model instances can be stored in TSDB. The metadata explorer supports querying the configured storage policies of measuring points, including the storage policy group, storage type, and storage time.
 
-模型测点必须配置TSDB存储策略，模型实例的测点数据才能存储至TSDB中，元数据检索支持查看模型测点的具体存储策略。包括存储策略所在分组、存储策略类型及存储时长。
+**Instance list**
 
-**实例列表**
+You can view all the instances associated with the model to which the measuring point belongs. Besides, cross links to the Data Insights and Data Quality pages are provided for viewing data and data quality details of the queried measuring point of the corresponding instance.
 
-支持查看测点所属模型所关联的所有实例，可快捷链接到数据洞察、数据质量页面查看对应实例当前测点的数据详情及数据质量详情。
-
-检索数据资产元数据的步骤，请参考[检索测点元数据](../howto/metadata/exploring_metadata)。
+For detailed steps about searching metadata of data assets, see [Querying Metadata of Measuring Points](../howto/metadata/exploring_metadata).
