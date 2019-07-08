@@ -18,9 +18,10 @@ The goal of this guide is to mark the AI type measuring point *test_raw* with qu
 | Function Type | Name | Identifier | Point Type | Data Type |
 | :------- | :-------- | :-------- | :------- | :------- |
 | Measuring point | test_raw  | test_raw  | AI       | DOUBLE   |
-| Measuring point | test_raw_dq | test_raw | AI       | DOUBLE   |
+| Measuring point | test_raw_filter | test_raw_filter | AI | DOUBLE |
+| Measuring point | test_raw_dq | test_raw_dq | AI       | DOUBLE   |
 
-.. note:: - The *test_raw* measuring point is for ingesting raw data, and the *test_raw_dq* point is for receiving the output of raw data being processed by the stream processing engine with data quality tags.
+.. note:: - The *test_raw* measuring point is for ingesting raw data, the *test_raw_filter* measuring point is for receiving the data that is filtered by the specified threshold, and the *test_raw_dq* point is for receiving the output of raw data being processed by the stream processing engine with data quality tags.
 
      - Ensure that the both the input point and output point are of AI type.
 
@@ -43,8 +44,8 @@ No.|Stage Template|Parameter Configuration|Description
 ---|---|---|---
 1	 | Kafka Consumer User | Topic: MEASURE_POINT_INTERNAL; Data Format: JSON |Configure the data source.
 2	 | Point selector | Select Policy: testModel::test_raw|Select the measuring point to be processed by the stream data processing job.
-3	 | MinMax Outlier | Model Point: testModel::test_raw; OpenClose: (x,y); Min-Max: 0,90.00; Output PointId: test_raw_dq |Configure the threshold rules for the raw data: the threshold values for the input point is (0, 90.00), and the output point is *test_raw_dq*.
-4	| Window Aggregator | Aggregation Window Type: Fixed Window Aggregator; Fixed Window Unit: minute; Fixed Window Size: 2; Latency (Minute): 0; Model::PointIn: testModel::test_raw; Aggregator Policy: avg; PointOut: test_raw_dq |Configure the window aggregation rules: the window type is fixed window, the window size is set as 2 min, the latency is set as 0, and the aggregation algorithm is set as avg.
+3	 | MinMax Outlier | Model Point: testModel::test_raw; OpenClose: (x,y); Min-Max: 0,90.00; Output PointId: test_raw_filter |Configure the threshold rules for the raw data: the threshold values for the input point is (0, 90.00), and the output point is *test_raw_filter*.
+4	| Window Aggregator | Aggregation Window Type: Fixed Window Aggregator; Fixed Window Unit: minute; Fixed Window Size: 2; Latency (Minute): 0; Model::PointIn: testModel::test_raw_filter; Aggregator Policy: avg; PointOut: test_raw_dq |Configure the window aggregation rules: the window type is fixed window, the window size is set as 2 min, the latency is set as 0, and the aggregation algorithm is set as avg.
 5	 | Kafka Producer |Topic: MEASURE_POINT_INTERNAL; Data Format: JSON  |Configure the data output.
 
 The figure below shows the configuration of the stream data processing job:
@@ -56,5 +57,5 @@ The figure below shows the configuration of the stream data processing job:
 After configuring the stream data processing job, click the Start icon to start the job. Return to the job list page to view the job running status.
 
 ### Step 3: View the data quality report
-Go to the **EnOS Console > Data Quality** module and enter the query conditions (model: *testModel*; measuring point: *test_raw_dq*) to query the data quality report of the measuring point. For details of the data quality report, see [Managing Data Quality](../howto/quality/managing_data_quality).
+Go to the **EnOS Console > Data Quality** module and enter the query conditions (model: *testModel*; measuring points: *test_raw_filter* and *test_raw_dq*) to query the data quality report of the measuring points. For details of the data quality report, see [Managing Data Quality](../howto/quality/managing_data_quality).
 

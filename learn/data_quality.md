@@ -25,4 +25,4 @@ For a detailed description of the data quality dimensions and a review of the da
 - Visualized data quality report query
 
 ## Usage Limit
-- Data quality rules are set by configuring relevant stages in stream data processing jobs. For more information, see [Querying Data Quality Report](../quickstart/gettingstarted_quality_report).
+- Data quality rules are set by configuring relevant stages in stream data processing jobs.
