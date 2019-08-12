@@ -6,6 +6,8 @@ After logging in to EnOS Console, select **Data Asset Explorer** from the left n
 
 .. image:: ../../media/metadata_search_result.png
 
+.. note:: Search keywords are case sensitive.
+
 ## Viewing Searched Metadata
 In the list of searched models and measuring points, click a record to open the details page, and view the following metadata information of the measuring point:
 
@@ -15,7 +17,7 @@ The basic information of the measuring point metadata includes:
 
 - Identifier
 - Name
-- Point type
+- Point Type
 
 .. image:: ../../media/metadata_basic_info.png
 

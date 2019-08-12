@@ -1,6 +1,6 @@
-# Aggregating AI Data
+# Aggregating Numeric Type Data
 
-This guide intends to help you learn how to process AI type stream data with the Time Window Aggregation template.
+This guide intends to help you learn how to process numeric type stream data with the Time Window Aggregation template.
 
 ## Prerequisites
 
@@ -55,7 +55,7 @@ The goal of this guide is to get the maximum value of the *test_raw* input point
 
 4. Configure the data processing policy. Click **New Strategy** to add a data processing policy. Description of each field is as follows:
 
-   - **Input Point**: Select the measuring point of AI raw data. In this example, select the *test_raw* point of the *testModel*.
+   - **Input Point**: Select the measuring point of input data. In this example, select the *test_raw* point of the *testModel*.
    - **Threshold**: Specify the threshold for filtering raw data before processing.
    - **Interpolation**: Select the interpolation algorithm that is used to process the input data that exceed the threshold. Currently, interpolation strategy supports *Ignore* only.
    - **Aggregation**: Select the function to compute valid data in the window. EnOS Streaming System currently supports functions like max, min, avg, sum, and cnt.
