@@ -1,6 +1,6 @@
-# Storage Types
+# Data Storage
 
-With the Storage Policy service, EnOS provides a variety of data storage options based on your data storage and data reading requirements. Data is stored by categories (data types and storage time), thus reducing data storage costs and enhancing data reading efficiency.
+With the Storage Policy service, EnOS provides a variety of data storage options based on data types and data reading requirements. Data can be stored by categories (data types and storage time), thus reducing data storage costs and enhancing data reading efficiency.
 
 ## Time Series Database (TSDB) Storage
 
@@ -8,10 +8,8 @@ TSDB is suitable for storing important and frequently-accessed data by data type
 
 For detailed information about TSDB storage, see [Configuring TSDB Storage](../configuring_tsdb_storage).
 
-
-
 ## Data Archiving
 
-Data Archiving storage is suitable for storing business data of huge size and lower access frequency. The archived files will be synchronized to target database and stored in the specified file path, thus achieving data backup.
+Data archiving is suitable for storing business data of huge size and lower access frequency. The archived files will be synchronized to target database and stored in the specified file path, thus achieving data backup.
 
-For detailed information about data archiving storage, see [Configuring Data Archiving Policy](../howto/archive/configuring_archive_storage).
+For detailed information about data archiving, see [Configuring Data Archiving Policy](../howto/archive/configuring_archive_storage).

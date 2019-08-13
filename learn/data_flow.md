@@ -1,6 +1,6 @@
 # Real-time Data Flow
 
-The data flow of real-time data in EnOS Stream Analytics can be viewed through 3 layers, the engine layer, the storage layer, and the application layer.
+Real-time data that is processed by EnOS Stream Analytics can be viewed through 3 layers, the engine layer, the storage layer, and the application layer.
 
 ## Engine Layer
 
@@ -28,11 +28,11 @@ Data in the Origin Data Topic and the Cal Data Topic are written to **In-memory 
 
 - IMDB: stores only the latest data for fast query.
 
-- TSDB: stores time series data of specified time range based on the storage policies that you define in the EnOS Console. The stored data can be retrieved through data service APIs.
+- TSDB: stores time series data of specified time range based on the storage policies that you define in the EnOS Console. The stored data can be retrieved through TSDB Data Service APIs.
 
 - Archive: archives asset data based on the data archiving policy that you define in the EnOS Console.
 
-   For more information about the types of data storage, see [Storage Types](storage_types).
+   For more information about the types of data storage, see [Data Storage](storage_types).
 
 See the following illustration of data flow in the storage layer:
 

@@ -21,7 +21,7 @@ Model configuration: Detailed information about the (*test_Model*) used for this
 |:--------------|:---------|:-----------|:-----------|:----------|
 | Measuring Point | test_raw | test_raw   | AI         | DOUBLE    |
 
-For instructions on creating and configuring models, see [Creating a Model](https://www.envisioniot.com/docs/device-connection/en/latest/howto/model/creating_model.html).
+For instructions on creating and configuring models, see [Creating a Model](https://docs.eniot.io/docs/device-connection/en/latest/howto/model/creating_model.html).
 
 ## Procedure
 
@@ -46,4 +46,4 @@ Click **OK** to save the storage policy configuration. The system will store the
 
 ### Step 3. Retrieve stored data with API
 
-Use the *Get Asset AI Data with Aggregation Logic* API to retrieve the stored normalized data of the measuring point. For sample code of calling data service APIs, go to **EnOS Console > EnOS API**.
+Use the *Get Asset AI Data with Aggregation Logic* API to retrieve the stored normalized data of the measuring point. For sample code of calling the TSDB Data Service API, go to **EnOS Console > EnOS API**.
