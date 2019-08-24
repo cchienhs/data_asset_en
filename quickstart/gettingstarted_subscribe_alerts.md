@@ -1,11 +1,11 @@
 # Subscribing to Alert Data
 
-This guide introduces how to configure alert data subscription on EnOS Console and consume alert data with the Java SDK provided by EnOS.
+This guide provides an example on how to configure an Alert Data Subscription on EnOS Console, and to subsequently consume the Alert Data using the Java SDK provided by EnOS.
 
 ## Prerequisites
 
 - Access permission to the Data Subscription module.
-- Device connection is completed, and the devices are uploading data to EnOS.
+- Device connection setup has been completed and device data is already being uploaded to EnOS.
 - The service account (SA) for subscribing data has been authorized to access asset data.
 - A workstation with IDE (IDEA or Eclipse) installed.
 
@@ -13,7 +13,7 @@ This guide introduces how to configure alert data subscription on EnOS Console a
 
 **Goal**
 
-The goal of this guide is to configure subscription to the alert data of measuring point *test_raw*.
+The goal of this guide is to provide a configuration example, allowing one to subscribe to the alert data of measuring point *test_raw*.
 
 **Data Preparation**
 
